@@ -1,0 +1,7 @@
+{
+  "name": "socialize-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
