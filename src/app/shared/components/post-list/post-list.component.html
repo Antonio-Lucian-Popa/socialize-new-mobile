@@ -10,7 +10,13 @@
       </div>
     </div>
 
-    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+    <ion-icon name="ellipsis-vertical-outline" [matMenuTriggerFor]="menu"></ion-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <ion-icon class="mr-2" name="trash-outline"></ion-icon>
+        <span>Remove</span>
+      </button>
+    </mat-menu>
   </div>
   <div class="middle" *ngIf="dataLoaded; else loadingImages">
     <swiper-container slides-per-view="1" loop="false" css-mode="false" pagination="true" centeredSlides="true"
