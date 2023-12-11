@@ -6,11 +6,11 @@
     <img src="./assets/logo.png" alt="logo">
   </div>
 
-  <div class="container-inputs mt-5 pb-4">
+  <form [formGroup]="userInfo" class="container-inputs mt-5 pb-4">
 
-    <ion-input class="mb-3" placeholder="First name" type="text"></ion-input>
+    <ion-input class="mb-3" formControlName="firstName" placeholder="First name" type="text"></ion-input>
 
-    <ion-input class="mb-3" placeholder="Last name" type="text"></ion-input>
+    <ion-input class="mb-3" formControlName="lastName" placeholder="Last name" type="text"></ion-input>
 
    <div class="d-flex justify-content-between align-items-center mb-3">
     <p>Birthday</p>
@@ -18,17 +18,17 @@
 
     <ion-modal [keepContentsMounted]="true">
       <ng-template>
-        <ion-datetime presentation="date" id="datetime"></ion-datetime>
+        <ion-datetime (ionChange)="onDateChange($event)" presentation="date" id="datetime"></ion-datetime>
       </ng-template>
     </ion-modal>
    </div>
 
-   <ion-input class="mb-3" placeholder="Email" type="email"></ion-input>
-   <ion-input class="mb-3" placeholder="Password" type="password"></ion-input>
+   <ion-input class="mb-3" formControlName="email" placeholder="Email" type="email"></ion-input>
+   <ion-input class="mb-3" formControlName="password" placeholder="Password" type="password"></ion-input>
 
-   <ion-button expand="block">Register</ion-button>
+   <ion-button expand="block" (click)="register()">Register</ion-button>
 
-  </div>
+  </form>
 
   <div class="d-flex justify-content-center w-100 mt-4">
     <span class="term-message">By creating an account you are agree to our <br/><a>Term and conditions</a></span>

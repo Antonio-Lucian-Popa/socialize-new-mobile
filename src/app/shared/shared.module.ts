@@ -5,6 +5,7 @@ import { StoryListComponent } from './components/story-list/story-list.component
 import { register } from 'swiper/element/bundle';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 register();
 
 
@@ -14,7 +15,9 @@ const components: any[] = [
   DatePickerComponent
 ];
 
-const modules: any[] = [];
+const modules: any[] = [
+  FormsModule, ReactiveFormsModule
+];
 
 
 @NgModule({
