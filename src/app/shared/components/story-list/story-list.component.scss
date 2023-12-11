@@ -1,0 +1,66 @@
+// .circle {
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 50%;
+//   border-color: #91AE8D;
+
+//   background-image: url('https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200');
+//   background-position: center; /* Center the image */
+//   background-repeat: no-repeat; /* Do not repeat the image */
+//   background-size: cover;
+// }
+
+.add-margin-story {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.story-list {
+  height: 100px; // Adjust the height as needed
+  margin: 0;
+  width: 100%;
+
+  swiper-wrapper {
+    display: flex !important;
+    justify-content: flex-start;
+    //width: 100%;
+  }
+
+  swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; // Adjust the width for each story
+
+    .story-item {
+      //     width: 50px;
+      // height: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%; // Circular images for stories
+        object-fit: cover;
+      }
+
+      p {
+        margin-top: 5px; // Space between image and text
+        font-size: 0.8em;
+        text-align: center;
+      }
+    }
+  }
+}

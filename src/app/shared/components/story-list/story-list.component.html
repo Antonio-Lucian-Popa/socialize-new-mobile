@@ -1,0 +1,24 @@
+<!-------------Aici trebuie sa fie un slider cu story component----------------------------->
+<!-- <div class="add-margin-story d-flex flex-column align-items-center">
+  <div class="circle">
+  </div>
+  <div class="label">
+    <p>Jake</p>
+  </div>
+</div> -->
+
+<swiper-container [config]="swiperConfig" class="story-list">
+  <swiper-wrapper>
+    <swiper-slide *ngFor="let story of stories">
+      <div class="story-item">
+        <div class="circle">
+          <img [src]="story.image" alt="Story">
+        </div>
+        <div class="label">
+          <p>{{ story.username }}</p>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-wrapper>
+</swiper-container>
+

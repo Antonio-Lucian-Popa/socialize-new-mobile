@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="container-logo">
+        <h4>Socialize</h4>
+      </div>
+      <p class="mb-0 pb-0">Explore</p>
+      <div class="container-message-icon d-flex align-items-center justify-content-center">
+        <ion-badge class="badge" slot="start">11</ion-badge>
+        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <app-story-list class="d-flex mt-3"></app-story-list>
+  <app-post-list class="d-flex justify-content-center"></app-post-list>
+
+</ion-content>
