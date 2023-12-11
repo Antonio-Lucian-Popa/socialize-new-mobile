@@ -76,7 +76,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "17296887644356666595"
+        "hash": "18290464392173669059"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -240,7 +240,7 @@
       },
       {
         "file": "src/app/shared/components/home/tab1.page.html",
-        "hash": "4217305998191147963"
+        "hash": "10589982911313307825"
       },
       {
         "file": "src/app/shared/components/home/tab1.page.scss",
@@ -256,11 +256,11 @@
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.html",
-        "hash": "16335784648129674992"
+        "hash": "15469950637306313730"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.scss",
-        "hash": "8960831100977899776"
+        "hash": "2289011413709345394"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.spec.ts",
@@ -268,7 +268,7 @@
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.ts",
-        "hash": "5326447427058825275"
+        "hash": "18393004986144435465"
       },
       {
         "file": "src/app/shared/components/story-list/story/story.component.html",
@@ -288,11 +288,11 @@
       },
       {
         "file": "src/app/shared/components/story-list/story-list.component.html",
-        "hash": "3572299301665950449"
+        "hash": "12375721717415825924"
       },
       {
         "file": "src/app/shared/components/story-list/story-list.component.scss",
-        "hash": "3265069342488531669"
+        "hash": "11018159801495004100"
       },
       {
         "file": "src/app/shared/components/story-list/story-list.component.spec.ts",
@@ -300,7 +300,7 @@
       },
       {
         "file": "src/app/shared/components/story-list/story-list.component.ts",
-        "hash": "26588368384446299"
+        "hash": "5656651525576679721"
       },
       {
         "file": "src/app/shared/components/tab2/tab2-routing.module.ts",
