@@ -85,11 +85,16 @@ export class StoryListComponent  implements OnInit {
     cssMode: false
   };
 
+  dataLoaded = false;
+
   constructor() { }
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit() {
     // BE call
+    setTimeout(() => {
+      this.dataLoaded = true;
+    }, 3000);
   }
 
 }

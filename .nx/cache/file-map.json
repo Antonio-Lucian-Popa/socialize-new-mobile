@@ -76,7 +76,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "2077546914924085513"
+        "hash": "17296887644356666595"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -124,7 +124,7 @@
       },
       {
         "file": "src/app/app-routing.module.ts",
-        "hash": "2116603468026672511"
+        "hash": "13941649567173789191"
       },
       {
         "file": "src/app/app.component.html",
@@ -147,20 +147,44 @@
         "hash": "6612241377566819927"
       },
       {
+        "file": "src/app/auth/components/sign-in/sign-in-routing.module.ts",
+        "hash": "12261988649302754037"
+      },
+      {
+        "file": "src/app/auth/components/sign-in/sign-in.module.ts",
+        "hash": "17358357741159912781"
+      },
+      {
+        "file": "src/app/auth/components/sign-in/sign-in.page.html",
+        "hash": "11029722528615672440"
+      },
+      {
+        "file": "src/app/auth/components/sign-in/sign-in.page.scss",
+        "hash": "16901780510571171691"
+      },
+      {
+        "file": "src/app/auth/components/sign-in/sign-in.page.spec.ts",
+        "hash": "10788507767257672417"
+      },
+      {
+        "file": "src/app/auth/components/sign-in/sign-in.page.ts",
+        "hash": "2455461296137671443"
+      },
+      {
         "file": "src/app/auth/components/sign-up/sign-up-routing.module.ts",
         "hash": "8560213118226082990"
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.module.ts",
-        "hash": "2607173687110437442"
+        "hash": "962019834968847449"
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.html",
-        "hash": "14486560446565449918"
+        "hash": "6605725887295092270"
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.scss",
-        "hash": "3244421341483603138"
+        "hash": "16901780510571171691"
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.spec.ts",
@@ -168,7 +192,7 @@
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.ts",
-        "hash": "15179038092361458595"
+        "hash": "7625109843303321289"
       },
       {
         "file": "src/app/explore-container/explore-container.component.html",
@@ -191,6 +215,22 @@
         "hash": "7418061059857182964"
       },
       {
+        "file": "src/app/shared/components/date-picker/date-picker.component.html",
+        "hash": "148526817996267828"
+      },
+      {
+        "file": "src/app/shared/components/date-picker/date-picker.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/shared/components/date-picker/date-picker.component.spec.ts",
+        "hash": "6617732345117309900"
+      },
+      {
+        "file": "src/app/shared/components/date-picker/date-picker.component.ts",
+        "hash": "1300158384886816695"
+      },
+      {
         "file": "src/app/shared/components/home/tab1-routing.module.ts",
         "hash": "11381973081829977082"
       },
@@ -200,7 +240,7 @@
       },
       {
         "file": "src/app/shared/components/home/tab1.page.html",
-        "hash": "11427744657319417644"
+        "hash": "4217305998191147963"
       },
       {
         "file": "src/app/shared/components/home/tab1.page.scss",
@@ -212,7 +252,7 @@
       },
       {
         "file": "src/app/shared/components/home/tab1.page.ts",
-        "hash": "9117558980506864833"
+        "hash": "601380575077895873"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.html",
@@ -336,11 +376,15 @@
       },
       {
         "file": "src/app/shared/shared.module.ts",
-        "hash": "12882729671837630560"
+        "hash": "995967497135484240"
       },
       {
         "file": "src/assets/icon/favicon.png",
         "hash": "17482944836898362639"
+      },
+      {
+        "file": "src/assets/logo.png",
+        "hash": "16667535765827300942"
       },
       {
         "file": "src/assets/shapes.svg",

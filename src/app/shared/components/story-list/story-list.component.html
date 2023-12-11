@@ -9,8 +9,8 @@
 
 <swiper-container [config]="swiperConfig" class="story-list">
   <swiper-wrapper>
-    <swiper-slide *ngFor="let story of stories">
-      <div class="story-item">
+    <swiper-slide *ngFor="let story of stories; let i = index">
+      <div *ngIf="dataLoaded; else loadingSkeleton" class="story-item">
         <div class="circle">
           <img [src]="story.image" alt="Story">
         </div>
@@ -18,7 +18,16 @@
           <p>{{ story.username }}</p>
         </div>
       </div>
+      <ng-template #loadingSkeleton>
+        <div class="story-item">
+          <div class="circle skeleton-image"></div>
+          <div class="label">
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </div>
+        </div>
+      </ng-template>
     </swiper-slide>
   </swiper-wrapper>
 </swiper-container>
+
 
