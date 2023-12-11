@@ -1,12 +1,16 @@
 <div class="container-post" *ngFor="let post of posts">
-  <div class="top" *ngIf="dataLoaded; else loadingSkeleton">
-    <div class="avatar">
-      <img src="{{ post.user.avatar }}" alt="avatar">
+  <div class="top d-flex align-items-center justify-content-between" *ngIf="dataLoaded; else loadingSkeleton">
+    <div class="d-flex">
+      <div class="avatar">
+        <img src="{{ post.user.avatar }}" alt="avatar">
+      </div>
+      <div class="info">
+        <div class="name">{{ post.user.name }}</div>
+        <div class="date">{{ post.created_at | date: 'dd/MM/yyyy' }}</div>
+      </div>
     </div>
-    <div class="info">
-      <div class="name">{{ post.user.name }}</div>
-      <div class="date">{{ post.created_at | date: 'dd/MM/yyyy' }}</div>
-    </div>
+
+    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
   </div>
   <div class="middle" *ngIf="dataLoaded; else loadingImages">
     <swiper-container slides-per-view="1" loop="false" css-mode="false" pagination="true" centeredSlides="true"
