@@ -1,5 +1,5 @@
 <div class="container-post" *ngFor="let post of posts">
-  <div class="top">
+  <div class="top" *ngIf="dataLoaded; else loadingSkeleton">
     <div class="avatar">
       <img src="{{ post.user.avatar }}" alt="avatar">
     </div>
@@ -8,7 +8,7 @@
       <div class="date">{{ post.created_at | date: 'dd/MM/yyyy' }}</div>
     </div>
   </div>
-  <div class="middle">
+  <div class="middle" *ngIf="dataLoaded; else loadingImages">
     <swiper-container slides-per-view="1" loop="false" css-mode="false" pagination="true" centeredSlides="true"
       pagination-dynamic-bullets="true" class="swiper">
       <swiper-slide>
@@ -26,4 +26,22 @@
     </swiper-container>
   </div>
   <div class="bottom"></div>
+
+  <ng-template #loadingSkeleton>
+    <div class="top">
+      <div class="avatar">
+        <ion-skeleton-text animated style="width: 50px; height: 50px; border-radius: 50%;"></ion-skeleton-text>
+      </div>
+      <div class="info">
+        <ion-skeleton-text animated style="width: 80%; height: 16px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%; height: 16px;"></ion-skeleton-text>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #loadingImages>
+    <div class="middle">
+      <div class="skeleton-image"></div>
+    </div>
+  </ng-template>
+
 </div>

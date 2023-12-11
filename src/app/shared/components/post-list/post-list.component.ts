@@ -28,6 +28,15 @@ export class PostListComponent {
     }
   ];
 
+  dataLoaded = false;
+
   constructor() { }
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.dataLoaded = true;
+    }, 3000);
+
+  }
 
 }

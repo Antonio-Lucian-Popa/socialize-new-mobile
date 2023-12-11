@@ -47,3 +47,9 @@
   width: 23rem;
     background: #ECECEC;
 }
+
+.skeleton-image {
+  width: 100%; /* Adjust based on the size of your swiper images */
+  height: 200px; /* Adjust based on the size of your swiper images */
+  background-color: #e4e4e4; /* Skeleton color */
+}
