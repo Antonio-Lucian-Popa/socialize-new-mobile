@@ -13,8 +13,10 @@
     <ion-icon name="ellipsis-vertical-outline" [matMenuTriggerFor]="menu"></ion-icon>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>
-        <ion-icon class="mr-2" name="trash-outline"></ion-icon>
+        <div class="d-flex align-items-center">
+          <ion-icon class="remove-icon" name="trash-outline"></ion-icon>
         <span>Remove</span>
+        </div>
       </button>
     </mat-menu>
   </div>
