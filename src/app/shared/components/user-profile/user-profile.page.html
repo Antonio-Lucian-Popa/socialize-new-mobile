@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+   <div class="top-user-profile">
+    <div class="cover"></div>
+    <ion-avatar>
+      <!-- <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" /> -->
+      <img alt="user profile" src="https://images.unsplash.com/photo-1660951381925-57ac7e40c40d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    </ion-avatar>
+   </div>
+  </ion-header>
+
+  <div class="user-info">
+    <div class="top d-flex align-items-center justify-content-between">
+      <span class="username">Lisa Aly</span>
+
+     <div class="d-flex align-items-center">
+      <ion-button size="small" shape="round" color="success">
+        Follow
+        <ion-icon slot="end" class="add-user-icon" name="person-add-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button size="small" shape="round" color="medium">
+        <ion-icon slot="icon-only" name="chatbubble-ellipses-outline"></ion-icon>
+      </ion-button>
+     </div>
+
+    </div>
+    <div class="bottom d-flex align-items-center mt-4">
+      <div class="d-flex flex-column text-align-center">
+        <span class="number">32</span>
+        <p>Posts</p>
+      </div>
+
+      <div class="d-flex flex-column text-align-center">
+        <span class="number">1K</span>
+        <p>Followers</p>
+      </div>
+
+      <div class="d-flex flex-column text-align-center">
+        <span class="number">30k</span>
+        <p>Following</p>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+

@@ -3,10 +3,12 @@
   "nxVersion": "17.1.2",
   "deps": {
     "@angular/animations": "^17.0.2",
+    "@angular/cdk": "^17.0.3",
     "@angular/common": "^17.0.2",
     "@angular/compiler": "^17.0.2",
     "@angular/core": "^17.0.2",
     "@angular/forms": "^17.0.2",
+    "@angular/material": "^17.0.3",
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
     "@angular/router": "^17.0.2",
@@ -76,7 +78,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "18290464392173669059"
+        "hash": "9841138723406280544"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -116,11 +118,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "17132527464831567302"
+        "hash": "12170019018964517308"
       },
       {
         "file": "package.json",
-        "hash": "18368522070673131145"
+        "hash": "10843774154377006875"
       },
       {
         "file": "src/app/app-routing.module.ts",
@@ -144,7 +146,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "6612241377566819927"
+        "hash": "14942151388336267553"
       },
       {
         "file": "src/app/auth/components/sign-in/sign-in-routing.module.ts",
@@ -240,11 +242,11 @@
       },
       {
         "file": "src/app/shared/components/home/tab1.page.html",
-        "hash": "10589982911313307825"
+        "hash": "17702282423887878223"
       },
       {
         "file": "src/app/shared/components/home/tab1.page.scss",
-        "hash": "16773589279475332082"
+        "hash": "6554412810089226400"
       },
       {
         "file": "src/app/shared/components/home/tab1.page.spec.ts",
@@ -256,11 +258,11 @@
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.html",
-        "hash": "15469950637306313730"
+        "hash": "6565069439775621284"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.scss",
-        "hash": "2289011413709345394"
+        "hash": "5566345542978294423"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.spec.ts",
@@ -376,7 +378,7 @@
       },
       {
         "file": "src/app/shared/shared.module.ts",
-        "hash": "995967497135484240"
+        "hash": "15275021886970537987"
       },
       {
         "file": "src/assets/icon/favicon.png",
@@ -404,7 +406,7 @@
       },
       {
         "file": "src/index.html",
-        "hash": "5962093970713772175"
+        "hash": "1838745449193070558"
       },
       {
         "file": "src/main.ts",
@@ -420,7 +422,7 @@
       },
       {
         "file": "src/theme/variables.scss",
-        "hash": "10976368105721052607"
+        "hash": "1324789441457696640"
       },
       {
         "file": "src/zone-flags.ts",
