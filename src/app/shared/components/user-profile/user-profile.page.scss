@@ -73,3 +73,15 @@ ion-avatar {
 .text-align-center {
   text-align: center;
 }
+
+:host ::ng-deep .mat-tab-group .mat-tab-label {
+  color: #5b7d88;
+}
+
+:host ::ng-deep .mat-tab-group .mat-ink-bar {
+  background-color: #5b7d88;
+}
+
+:host ::ng-deep .mdc-tab-indicator__content {
+  background-color: #5b7d88!important;
+}

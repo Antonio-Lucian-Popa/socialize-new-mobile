@@ -7,6 +7,7 @@ import { UserProfilePage } from './user-profile.page';
 
 import { UserProfilePageRoutingModule } from './user-profile-routing.module';
 import { ExploreContainerComponentModule } from 'src/app/explore-container/explore-container.module';
+import { SharedModule } from '../../shared.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { ExploreContainerComponentModule } from 'src/app/explore-container/explo
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    UserProfilePageRoutingModule
+    UserProfilePageRoutingModule,
+    SharedModule
   ],
   declarations: [UserProfilePage]
 })

@@ -6,6 +6,7 @@ import { register } from 'swiper/element/bundle';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { DatePickerComponent } from './components/date-picker/date-picker.component';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 register();
 
@@ -17,7 +18,7 @@ const components: any[] = [
 ];
 
 const modules: any[] = [
-  FormsModule, ReactiveFormsModule, MatMenuModule
+  FormsModule, ReactiveFormsModule, MatMenuModule, MatTabsModule
 ];
 
 
