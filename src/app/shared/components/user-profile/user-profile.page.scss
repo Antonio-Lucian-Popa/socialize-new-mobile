@@ -85,3 +85,22 @@ ion-avatar {
 :host ::ng-deep .mdc-tab-indicator__content {
   background-color: #5b7d88!important;
 }
+
+
+
+.images {
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .image {
+    margin: 0 10px;
+
+    img {
+      width: 150px;
+      max-height: 150px;
+      border-radius: 20px;
+    }
+  }
+
+}
