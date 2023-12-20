@@ -8,6 +8,7 @@ import { DatePickerComponent } from './components/date-picker/date-picker.compon
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TimeAgoPipe } from './pipes/time-ago.pipe';
 register();
 
 
@@ -25,13 +26,14 @@ const modules: any[] = [
 @NgModule({
   declarations: [
     ...components,
+    TimeAgoPipe,
   ],
   imports: [
     IonicModule,
     CommonModule,
     ...modules
   ],
-  exports: [...modules, ...components],
+  exports: [...modules, ...components, TimeAgoPipe],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SharedModule { }

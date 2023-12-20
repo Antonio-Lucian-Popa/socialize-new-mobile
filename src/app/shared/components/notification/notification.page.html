@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h2>Notifications</h2>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list class="ion-margin-top">
+    <ion-item *ngFor="let notification of notifications; let index">
+      <ion-avatar slot="start">
+        <img [src]="notification.user.profileImage" alt="avatar" />
+      </ion-avatar>
+      <ion-label>
+        <div class="flex align-items-start justify-items-start">
+          <h3>{{ notification.user.firstName }} {{ notification.user.lastName }}</h3>
+          <p class="notification-title">{{ notification.title }}</p>
+        </div>
+        <p class="createdAt">{{notification.date | timeAgo}}</p>
+      </ion-label>
+      <div class="d-flex flex-column  justify-items-end">
+
+        <ion-badge class="red-circle" color="danger" *ngIf="notification.read === false"></ion-badge>
+      </div>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

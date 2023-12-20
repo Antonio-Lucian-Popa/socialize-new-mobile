@@ -12,11 +12,11 @@
     </ion-tab-button>
 
 
-    <ion-tab-button tab="tab3" href="/tabs/tab3">
-      <ion-icon class="add-btn" name="add-circle-outline"></ion-icon>
+    <ion-tab-button>
+      <ion-icon class="add-btn" name="add-circle-outline" id="open-modal"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab3" href="/tabs/tab3">
+    <ion-tab-button tab="tab4" href="/tabs/tab4">
       <ion-icon name="notifications-outline"></ion-icon>
       <ion-label>Notifications</ion-label>
     </ion-tab-button>
@@ -28,3 +28,68 @@
   </ion-tab-bar>
 
 </ion-tabs>
+
+<ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="cancel()">Cancel</ion-button>
+        </ion-buttons>
+        <ion-title>Create Post</ion-title>
+        <!-- <ion-buttons slot="end">
+          <ion-button (click)="confirm()" [strong]="true">Post</ion-button>
+        </ion-buttons> -->
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <form [formGroup]="post">
+        <ion-card>
+          <ion-card-header>
+            <ion-avatar slot="start">
+              <img src="https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z2lybHxlbnwwfDF8MHx8fDA%3D" />
+            </ion-avatar>
+            <ion-textarea placeholder="What's on your mind?" formControlName="description"></ion-textarea>
+          </ion-card-header>
+
+        </ion-card>
+      </form>
+
+            <!-- Image previews with remove button -->
+            <ion-card-content>
+              <div class="image-container mt-3" *ngFor="let image of images; let i = index">
+                <img [src]="image" /> <!-- Make sure `image` is a base64 string -->
+                <ion-fab vertical="top" horizontal="end" slot="fixed">
+                  <ion-fab-button size="small" (click)="removeImage(i)">
+                    <ion-icon name="close"></ion-icon>
+                  </ion-fab-button>
+                </ion-fab>
+              </div>
+            </ion-card-content>
+
+
+
+    </ion-content>
+
+    <ion-footer>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <!-- <ion-button>
+            <ion-icon slot="icon-only" name="camera"></ion-icon>
+          </ion-button> -->
+          <ion-button (click)="uploadImage()">
+            <ion-icon slot="icon-only" name="image"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button (click)="createPost()">
+            <ion-icon slot="icon-only" name="send"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
+
+  </ng-template>
+</ion-modal>
+
+<input type="file" multiple id="file-input" style="display: none" (change)="onFileChange($event)" />

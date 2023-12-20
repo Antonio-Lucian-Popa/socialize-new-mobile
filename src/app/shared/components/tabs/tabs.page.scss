@@ -1,3 +1,73 @@
 .add-btn {
   font-size: 2.5rem;
 }
+
+ion-content {
+ // min-height: 100vh; // 100% of the viewport height
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+    ion-avatar {
+      --border-radius: 50%;
+      width: 40px; // Adjust size as needed
+      height: 40px; // Adjust size as needed
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    ion-textarea {
+      --padding-start: 10px;
+      --placeholder-color: #999;
+      --placeholder-font-style: italic;
+      // Add more styles for the textarea as needed
+    }
+  }
+
+  ion-card {
+    position: relative;
+    img {
+      width: 100%;
+      height: auto; // Adjust height as needed to maintain aspect ratio
+    }
+    ion-fab {
+      ion-fab-button {
+        --background: #fff; // Use the color that fits your design
+        --color: #000; // Use the color that fits your design
+      }
+    }
+  }
+
+  ion-fab-button {
+    --box-shadow: none;
+  }
+
+  ion-grid {
+    ion-button {
+      --padding-start: 0;
+      --padding-end: 0;
+      ion-icon {
+        font-size: 1.5rem; // Adjust icon size as needed
+      }
+    }
+  }
+}
+
+ion-footer {
+  --ion-safe-area-bottom: 20px; // This ensures the footer respects the safe area
+}
+
+ion-fab {
+  ion-fab-button {
+    --background: #fff; // Color for the remove button
+    --color: #000; // Icon color for the remove button
+  }
+}
+
+.image-container {
+  position: relative;
+}

@@ -22,6 +22,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.2",
     "ionicons": "^7.0.0",
+    "json-server": "^0.17.4",
     "rxjs": "~7.8.0",
     "swiper": "^11.0.5",
     "tslib": "^2.3.0",
@@ -78,19 +79,19 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "9841138723406280544"
+        "hash": "4603042412969348606"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "14726704517186704885"
+        "hash": "486518674712801173"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "14084728902276829146"
+        "hash": "10782340025321481041"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "2880901786048733265"
+        "hash": "8825708800528889493"
       },
       {
         "file": ".vscode/extensions.json",
@@ -109,6 +110,10 @@
         "hash": "8806609711369569127"
       },
       {
+        "file": "db.json",
+        "hash": "14990731856035152778"
+      },
+      {
         "file": "ionic.config.json",
         "hash": "3001781035481201668"
       },
@@ -118,11 +123,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "12170019018964517308"
+        "hash": "3045641609727256910"
       },
       {
         "file": "package.json",
-        "hash": "10843774154377006875"
+        "hash": "13579438645414316090"
       },
       {
         "file": "src/app/app-routing.module.ts",
@@ -146,7 +151,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "14942151388336267553"
+        "hash": "17088192095583700993"
       },
       {
         "file": "src/app/auth/components/sign-in/sign-in-routing.module.ts",
@@ -257,6 +262,30 @@
         "hash": "601380575077895873"
       },
       {
+        "file": "src/app/shared/components/notification/notification-routing.module.ts",
+        "hash": "4905458393331457434"
+      },
+      {
+        "file": "src/app/shared/components/notification/notification.module.ts",
+        "hash": "3315471432946344910"
+      },
+      {
+        "file": "src/app/shared/components/notification/notification.page.html",
+        "hash": "16718813741644482523"
+      },
+      {
+        "file": "src/app/shared/components/notification/notification.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/shared/components/notification/notification.page.spec.ts",
+        "hash": "643497883120535833"
+      },
+      {
+        "file": "src/app/shared/components/notification/notification.page.ts",
+        "hash": "12971777521665252246"
+      },
+      {
         "file": "src/app/shared/components/post-list/post-list.component.html",
         "hash": "6565069439775621284"
       },
@@ -354,7 +383,7 @@
       },
       {
         "file": "src/app/shared/components/tabs/tabs-routing.module.ts",
-        "hash": "11676090121633581802"
+        "hash": "5161583199085106361"
       },
       {
         "file": "src/app/shared/components/tabs/tabs.module.ts",
@@ -362,7 +391,7 @@
       },
       {
         "file": "src/app/shared/components/tabs/tabs.page.html",
-        "hash": "11325697027538619290"
+        "hash": "5646023610131839468"
       },
       {
         "file": "src/app/shared/components/tabs/tabs.page.scss",
@@ -377,8 +406,56 @@
         "hash": "15132660516945422335"
       },
       {
+        "file": "src/app/shared/components/user-profile/user-profile-routing.module.ts",
+        "hash": "8691849204414765126"
+      },
+      {
+        "file": "src/app/shared/components/user-profile/user-profile.module.ts",
+        "hash": "5910846579592969371"
+      },
+      {
+        "file": "src/app/shared/components/user-profile/user-profile.page.html",
+        "hash": "8252724118570956332"
+      },
+      {
+        "file": "src/app/shared/components/user-profile/user-profile.page.scss",
+        "hash": "6131266425750976722"
+      },
+      {
+        "file": "src/app/shared/components/user-profile/user-profile.page.spec.ts",
+        "hash": "15244711038740096646"
+      },
+      {
+        "file": "src/app/shared/components/user-profile/user-profile.page.ts",
+        "hash": "8534551240982246590"
+      },
+      {
+        "file": "src/app/shared/interface/notification.ts",
+        "hash": "18156300866061493535"
+      },
+      {
+        "file": "src/app/shared/interface/user.ts",
+        "hash": "9170332063472264195"
+      },
+      {
+        "file": "src/app/shared/pipes/time-ago.pipe.spec.ts",
+        "hash": "10894262850296352549"
+      },
+      {
+        "file": "src/app/shared/pipes/time-ago.pipe.ts",
+        "hash": "9223464164618956411"
+      },
+      {
+        "file": "src/app/shared/services/notification.service.spec.ts",
+        "hash": "265678563929952267"
+      },
+      {
+        "file": "src/app/shared/services/notification.service.ts",
+        "hash": "2099479690684503106"
+      },
+      {
         "file": "src/app/shared/shared.module.ts",
-        "hash": "15275021886970537987"
+        "hash": "5740296262747822274"
       },
       {
         "file": "src/assets/icon/favicon.png",
