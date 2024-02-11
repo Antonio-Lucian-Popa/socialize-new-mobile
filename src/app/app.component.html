@@ -1,3 +1,4 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-router-outlet *ngIf="!isStoryOpened"></ion-router-outlet>
+  <app-story-view *ngIf="isStoryOpened" class="h-100"></app-story-view>
 </ion-app>

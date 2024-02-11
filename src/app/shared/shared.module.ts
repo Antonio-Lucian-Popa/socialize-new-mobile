@@ -9,13 +9,19 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
+import { PostComponent } from './components/post/post.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { CommentComponent } from './components/comments/comment/comment.component';
 register();
 
 
 const components: any[] = [
   StoryListComponent,
   PostListComponent,
-  DatePickerComponent
+  DatePickerComponent,
+  PostComponent,
+  CommentsComponent,
+  CommentComponent
 ];
 
 const modules: any[] = [

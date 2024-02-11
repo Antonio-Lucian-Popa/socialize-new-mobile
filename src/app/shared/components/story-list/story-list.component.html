@@ -10,7 +10,7 @@
 <swiper-container [config]="swiperConfig" class="story-list">
   <swiper-wrapper>
     <swiper-slide *ngFor="let story of stories; let i = index">
-      <div *ngIf="dataLoaded; else loadingSkeleton" class="story-item">
+      <div *ngIf="dataLoaded; else loadingSkeleton" class="story-item" (click)="openStory()">
         <div class="circle">
           <img [src]="story.image" alt="Story">
         </div>

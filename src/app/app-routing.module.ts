@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'sign-in',
     loadChildren: () => import('./auth/components/sign-in/sign-in.module').then( m => m.SignInPageModule)
-  }
+  },
 ];
 @NgModule({
   imports: [

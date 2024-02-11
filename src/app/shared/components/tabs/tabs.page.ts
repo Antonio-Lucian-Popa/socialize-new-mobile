@@ -1,25 +1,33 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
+import { PostService } from '../../services/post.service';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-tabs',
   templateUrl: 'tabs.page.html',
   styleUrls: ['tabs.page.scss']
 })
-export class TabsPage {
+export class TabsPage implements OnInit {
 
   @ViewChild(IonModal)
   modal!: IonModal;
 
   images: string[] = []; // This will store the image data
 
+  userId: string = 'userId';
+
   post = this.fb.group({
     description: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private postService: PostService, private authService: AuthService) {}
+
+  ngOnInit(): void {
+      this.authService
+  }
 
   cancel() {
     this.modal.dismiss(null, 'cancel');
@@ -60,7 +68,9 @@ export class TabsPage {
 
   createPost(): void {
     if (this.post.valid || this.images.length > 0) {
-      console.log(this.post.value);
+      console.log(this.post.value, this.images);
+      this.postService.postCreateEmmitter.emit({userId: this.userId, post: this.post.value, images: this.images});
+     // this.postService.createPost('userId', this.post.value, this.images).subscribe(res => console.log(res));
     }
   }
 

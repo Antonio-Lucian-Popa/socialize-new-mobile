@@ -24,19 +24,28 @@ export class PostListComponent {
         id: 12,
         name: 'John Doe',
         avatar: 'https://picsum.photos/200/300/?random'
-      }
+      },
+      likes: [
+        {
+          id: 1,
+          user: {
+            id: 1234567890,
+            name: 'John Doe',
+            avatar: 'https://picsum.photos/200/300/?random'
+          }
+        },
+        {
+          id: 2,
+          user: {
+            id: 13,
+            name: 'Jane Doe',
+            avatar: 'https://picsum.photos/200/300/?random'
+          }
+        }
+      ]
     }
   ];
 
-  dataLoaded = false;
-
   constructor() { }
-
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.dataLoaded = true;
-    }, 3000);
-
-  }
 
 }

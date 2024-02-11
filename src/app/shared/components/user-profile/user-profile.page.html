@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar class="toolbar-profile">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
@@ -22,9 +22,14 @@
       <span class="username">{{userProfile.firstName}} {{userProfile.lastName}}</span>
 
      <div class="d-flex align-items-center">
-      <ion-button size="small" shape="round" color="success">
+      <ion-button *ngIf="!isUserFollowing" size="small" shape="round" color="success" (click)="followUser(userProfile.id)">
         Follow
         <ion-icon slot="end" class="add-user-icon" name="person-add-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button *ngIf="isUserFollowing" size="small" shape="round" color="danger" (click)="unfollowUser(userProfile.id)">
+        Unfollow
+        <ion-icon slot="end" class="add-user-icon" name="person-remove-outline"></ion-icon>
       </ion-button>
 
       <ion-button size="small" shape="round" color="medium">

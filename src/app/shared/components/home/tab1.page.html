@@ -16,6 +16,11 @@
 <ion-content [fullscreen]="true">
 
   <app-story-list class="container-story-list d-flex mt-3"></app-story-list>
+
+ <div class="d-flex flex-column mt-3" *ngIf="isPostCreate">
+  <span class="loading-message mb-2">Creating post</span>
+  <ion-progress-bar [value]="progress"></ion-progress-bar>
+ </div>
   <app-post-list class="d-flex justify-content-center mt-5"></app-post-list>
 
 </ion-content>

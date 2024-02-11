@@ -1,0 +1,20 @@
+<div class="story">
+  <div class="swiper d-flex" id="storySlider" #swiperContainer>
+    <div class="swiper-wrapper">
+      <ng-container *ngFor="let slide of slides; let i = index">
+        <div class="swiper-slide" *ngIf="slide.type === 'image'">
+          <img [src]="slide.src" />
+        </div>
+        <div class="swiper-slide" *ngIf="slide.type === 'video'">
+          <!-- Simply include the video; the component handles the rest -->
+          <video autoplay muted loop>
+            <source [src]="slide.src" type="video/mp4">
+          </video>
+        </div>
+      </ng-container>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>

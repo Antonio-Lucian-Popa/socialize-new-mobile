@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile',
   templateUrl: 'user-profile.page.html',
   styleUrls: ['user-profile.page.scss']
 })
-export class UserProfilePage {
+export class UserProfilePage implements OnInit {
+
+  isUserFollowing = false;
 
   userProfile: any = {
     id: 1,
@@ -46,6 +49,24 @@ export class UserProfilePage {
     }
   ];
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    const userId = this.route.snapshot.paramMap.get('id');
+    console.log(userId);
+    if (userId) {
+      // make be call to retreive the full user profile
+    }
+  }
+
+  followUser(userId: string) {
+    // make a BE call to add user to my following list
+    this.isUserFollowing = true;
+  }
+
+  unfollowUser(userId: string) {
+    // make a BE call to remove user from my following list
+    this.isUserFollowing = false;
+  }
 
 }

@@ -9,10 +9,11 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { StoryViewComponent } from './shared/components/story-list/story-view/story-view.component';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, StoryViewComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, NgbModule, BrowserAnimationsModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

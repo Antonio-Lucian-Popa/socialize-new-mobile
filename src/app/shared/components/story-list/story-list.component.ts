@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StoryService } from '../../services/story.service';
 
 
 
@@ -87,7 +88,7 @@ export class StoryListComponent  implements OnInit {
 
   dataLoaded = false;
 
-  constructor() { }
+  constructor(private storyService: StoryService) { }
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit() {
@@ -97,4 +98,8 @@ export class StoryListComponent  implements OnInit {
     }, 3000);
   }
 
+  openStory(): void {
+    // emit event for story open
+    this.storyService.isStoryOpened.next(true);
+  }
 }
