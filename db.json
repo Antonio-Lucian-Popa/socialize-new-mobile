@@ -113,30 +113,112 @@
     }
   ],
   "comments": [
-    {
-      "id": 1,
-      "user": {
-        "uuid": 1,
-        "profileImage": "https://randomuser.me/api/portraits/women/57.jpg",
-        "firstName": "Lidia",
-        "lastName": "Popescu",
-        "email": "john@gmail.com"
+      {
+        "id": 1,
+        "user": {
+          "id": "user1",
+          "firstName": "John",
+          "lastName": "Doe",
+          "avatar": "https://example.com/avatars/user1.jpg"
+        },
+        "content": "This is a great post! Thanks for sharing.",
+        "createdAt": "2024-02-10T15:00:00Z",
+        "subComments": [
+          {
+            "id": 2,
+            "user": {
+              "id": "user2",
+              "firstName": "Jane",
+              "lastName": "Doe",
+              "avatar": "https://example.com/avatars/user2.jpg"
+            },
+            "content": "I totally agree with you!",
+            "createdAt": "2024-02-10T16:00:00Z",
+            "subComments": [],
+            "likes": [
+              {
+                "id": 1,
+                "user": {
+                  "id": "user3",
+                  "name": "Alice",
+                  "avatar": "https://example.com/avatars/user3.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "likes": [
+          {
+            "id": 1,
+            "user": {
+              "id": "user4",
+              "name": "Bob",
+              "avatar": "https://example.com/avatars/user4.jpg"
+            }
+          },
+          {
+            "id": 2,
+            "user": {
+              "id": "user5",
+              "name": "Charlie",
+              "avatar": "https://example.com/avatars/user5.jpg"
+            }
+          }
+        ]
       },
-      "text": "Great post!",
-      "timestamp": "2023-11-01T12:00:00"
-    },
-    {
-      "id": 2,
-      "user": {
-        "uuid": 1,
-        "profileImage": "https://randomuser.me/api/portraits/women/57.jpg",
-        "firstName": "Lidia",
-        "lastName": "Popescu",
-        "email": "john@gmail.com"
-      },
-      "text": "Great post!",
-      "timestamp": "2023-11-01T12:00:00"
-    }
+      {
+        "id": 2,
+        "user": {
+          "id": "user4",
+          "firstName": "Smith",
+          "lastName": "Anderson",
+          "avatar": "https://example.com/avatars/user2.jpg"
+        },
+        "content": "This post is boring! I don't like much. Can you provide more detail about your trip?",
+        "createdAt": "2024-02-10T15:00:00Z",
+        "subComments": [
+          {
+            "id": 2,
+            "user": {
+              "id": "user2",
+              "firstName": "Jane",
+              "lastName": "Doe",
+              "avatar": "https://example.com/avatars/user2.jpg"
+            },
+            "content": "I totally agree with you!",
+            "createdAt": "2024-02-10T16:00:00Z",
+            "subComments": [],
+            "likes": [
+              {
+                "id": 1,
+                "user": {
+                  "id": "user3",
+                  "name": "Alice",
+                  "avatar": "https://example.com/avatars/user3.jpg"
+                }
+              }
+            ]
+          }
+        ],
+        "likes": [
+          {
+            "id": 1,
+            "user": {
+              "id": "user4",
+              "name": "Bob",
+              "avatar": "https://example.com/avatars/user4.jpg"
+            }
+          },
+          {
+            "id": 2,
+            "user": {
+              "id": "user5",
+              "name": "Charlie",
+              "avatar": "https://example.com/avatars/user5.jpg"
+            }
+          }
+        ]
+      }
   ],
   "profile": {
     "name": "typicode"
