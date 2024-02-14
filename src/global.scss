@@ -42,3 +42,37 @@ ion-tab-bar, ion-tab-button {
 .align-items-center {
   align-items: center;
 }
+
+
+.bottom-comment {
+  position: fixed;
+  bottom: 27%;
+  left: 0;
+  width: 100%;
+  padding: 10px 15px;
+
+  .container-input {
+    display: flex; // Ensure this is flex to align items
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 20px; // Adjusted for aesthetics, previously 50%
+    max-height: 150px; // Maximum height of the container
+    overflow-y: auto; // Scrollbar for container if content exceeds max height
+
+    ion-textarea {
+      flex-grow: 1; // Allow textarea to grow and fill container
+      outline: none !important;
+      background: none;
+      -webkit-appearance: none;
+      box-shadow: none !important;
+      border: none;
+      max-height: 140px; // Slightly less than container to ensure fit
+      overflow-y: auto; // Allow scrolling within the textarea itself
+      margin-left: 1rem;
+    }
+
+    ion-button {
+      font-size: 0.7rem;
+    }
+  }
+}
+

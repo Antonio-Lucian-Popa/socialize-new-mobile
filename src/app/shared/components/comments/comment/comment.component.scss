@@ -2,3 +2,12 @@
   white-space: normal;
   overflow: visible;
 }
+
+.sub-comment {
+  margin-left: 20px; /* Adjust as necessary for your design */
+  border-left: 2px solid #ccc; /* Optional: adds a visual cue for threading */
+}
+
+.direct-subcomment {
+  margin-left: 20px; // Adjust as needed
+}

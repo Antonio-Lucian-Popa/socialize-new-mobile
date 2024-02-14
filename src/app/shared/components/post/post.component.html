@@ -14,7 +14,7 @@
     <button mat-menu-item>
       <div class="d-flex align-items-center">
         <ion-icon class="remove-icon" name="trash-outline"></ion-icon>
-      <span>Remove</span>
+        <span>Remove</span>
       </div>
     </button>
   </mat-menu>
@@ -25,19 +25,19 @@
     <swiper-slide>
       <div class="swiper-zoom-container">
         <img class="post-image" alt="Silhouette of mountains"
-        src="https://plus.unsplash.com/premium_photo-1696962118708-a7da28938943?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" />
+          src="https://plus.unsplash.com/premium_photo-1696962118708-a7da28938943?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" />
       </div>
     </swiper-slide>
     <swiper-slide>
       <div class="swiper-zoom-container">
-      <img class="post-image" alt="Silhouette of mountains"
-        src="https://images.unsplash.com/photo-1696948132802-3d61d42d516a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" />
+        <img class="post-image" alt="Silhouette of mountains"
+          src="https://images.unsplash.com/photo-1696948132802-3d61d42d516a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80" />
       </div>
-      </swiper-slide>
+    </swiper-slide>
     <swiper-slide>
       <div class="swiper-zoom-container">
-      <img class="post-image" alt="Silhouette of mountains"
-        src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <img class="post-image" alt="Silhouette of mountains"
+          src="https://ionicframework.com/docs/img/demos/card-media.png" />
       </div>
     </swiper-slide>
   </swiper-container>
@@ -49,7 +49,7 @@
     <span class="ml-1">{{post.likes.length}}</span>
   </div>
   <div class="d-flex align-items-center">
-    <ion-icon name="chatbubble-ellipses-outline" (click)="setOpen(true)"></ion-icon>
+    <ion-icon id="open-comment-modal" name="chatbubble-ellipses-outline"></ion-icon>
     <span class="ml-1">3</span>
   </div>
 </div>
@@ -84,21 +84,22 @@
   </div>
 </ng-template>
 
-<ion-modal [isOpen]="isModalOpen">
+<ion-modal *ngIf="dataLoaded" #modal trigger="open-comment-modal" [initialBreakpoint]="0.75" [breakpoints]="[0, 0.75]">
   <ng-template>
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-button (click)="setOpen(false)">Cancel</ion-button>
-        </ion-buttons>
-        <ion-title>Welcome</ion-title>
-        <ion-buttons slot="end">
-          <ion-button (click)="setOpen(false)" [strong]="true">Confirm</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
     <ion-content class="ion-padding">
       <app-comments></app-comments>
+      <!------------Bottom--------------->
+      <div class="bottom-comment d-flex align-items-center w-100">
+        <ion-avatar class="d-flex align-items-center justify-content-center" slot="start">
+          <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <div class="container-input d-flex align-items-center w-100 ml-3">
+          <ion-textarea placeholder="Type something here"></ion-textarea>
+          <ion-button fill="clear" slot="end">
+            <ion-icon name="send" slot="icon-only"></ion-icon>
+          </ion-button>
+        </div>
+      </div>
     </ion-content>
   </ng-template>
 </ion-modal>

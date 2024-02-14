@@ -1,16 +1,21 @@
-<ion-item>
+<!-- Main Comment -->
+<ion-item class="mt-2">
   <ion-avatar slot="start">
-    <img src="https://ionicframework.com/docs/demos/api/list/avatar-finn.png" />
+    <img src="{{ comment.user.avatar }}" />
   </ion-avatar>
-  <ion-label class="wrap-text">
-    <h2>{{comment.user.firstName}} {{comment.user.lastName}}</h2>
-    <p>
-      <!-- Show truncated text with 'Show more' link or full text based on flag -->
-      {{ showFullText ? comment.content : (comment.content.length > maxLength ? (comment.content | slice:0:maxLength) + '...' : comment.content) }}
-      <!-- Conditionally display 'Show more' link -->
-      <span *ngIf="!showFullText && comment.content.length > maxLength" (click)="toggleText()" style="color: blue; cursor: pointer;">Show more</span>
-    </p>
-  </ion-label>
+  <div class="d-flex flex-column align-items-start">
+    <ion-label class="wrap-text">
+      <h2>{{ comment.user.firstName }} {{ comment.user.lastName }}</h2>
+      <p>
+        {{ expandedStates[comment.id] ? comment.content : (comment.content.length > maxLength ? (comment.content | slice:0:maxLength) + '...' : comment.content) }}
+        <span *ngIf="!expandedStates[comment.id] && comment.content.length > maxLength" (click)="toggleText(comment.id)" style="color: blue; cursor: pointer;">Show more</span>
+      </p>
+    </ion-label>
+
+    <span class="mt-2 mb-2" *ngIf="comment.subComments.length > 0" (click)="toggleSubComments(comment.id)">
+      {{ showSubComments[comment.id] ? 'Hide' : 'Show' }} {{ comment.subComments.length }} Replies
+    </span>
+  </div>
   <ion-button fill="clear" slot="end">
     <ion-icon name="heart" slot="icon-only"></ion-icon>
   </ion-button>
@@ -18,3 +23,8 @@
     <ion-icon ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
   </ion-button>
 </ion-item>
+
+<!-- Subcomments (displayed based on toggle state) -->
+<ng-container *ngIf="showSubComments[comment.id]">
+  <app-comment *ngFor="let subComment of comment.subComments" [comment]="subComment" class="sub-comment"></app-comment>
+</ng-container>

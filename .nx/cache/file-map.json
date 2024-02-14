@@ -89,7 +89,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "12480958813677341231"
+        "hash": "17733682724015725013"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -121,7 +121,7 @@
       },
       {
         "file": "db.json",
-        "hash": "8021429103086134267"
+        "hash": "1960137265994685446"
       },
       {
         "file": "ionic.config.json",
@@ -248,6 +248,38 @@
         "hash": "7418061059857182964"
       },
       {
+        "file": "src/app/shared/components/comments/comment/comment.component.html",
+        "hash": "14639772966378602950"
+      },
+      {
+        "file": "src/app/shared/components/comments/comment/comment.component.scss",
+        "hash": "3943028836676875887"
+      },
+      {
+        "file": "src/app/shared/components/comments/comment/comment.component.spec.ts",
+        "hash": "14032156021574078011"
+      },
+      {
+        "file": "src/app/shared/components/comments/comment/comment.component.ts",
+        "hash": "14642959704193519698"
+      },
+      {
+        "file": "src/app/shared/components/comments/comments.component.html",
+        "hash": "14347993934677836602"
+      },
+      {
+        "file": "src/app/shared/components/comments/comments.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/shared/components/comments/comments.component.spec.ts",
+        "hash": "10769919844036900865"
+      },
+      {
+        "file": "src/app/shared/components/comments/comments.component.ts",
+        "hash": "8977588937845921068"
+      },
+      {
         "file": "src/app/shared/components/date-picker/date-picker.component.html",
         "hash": "148526817996267828"
       },
@@ -313,7 +345,7 @@
       },
       {
         "file": "src/app/shared/components/post/post.component.html",
-        "hash": "2583555670280950127"
+        "hash": "7116253761068931647"
       },
       {
         "file": "src/app/shared/components/post/post.component.scss",
@@ -325,7 +357,7 @@
       },
       {
         "file": "src/app/shared/components/post/post.component.ts",
-        "hash": "14819985506400144316"
+        "hash": "7092671256353802321"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.html",
@@ -488,6 +520,10 @@
         "hash": "14738945265624593733"
       },
       {
+        "file": "src/app/shared/interface/comment.ts",
+        "hash": "15956257196792970566"
+      },
+      {
         "file": "src/app/shared/interface/notification.ts",
         "hash": "18156300866061493535"
       },
@@ -506,6 +542,14 @@
       {
         "file": "src/app/shared/pipes/time-ago.pipe.ts",
         "hash": "9223464164618956411"
+      },
+      {
+        "file": "src/app/shared/services/comment.service.spec.ts",
+        "hash": "17624993744728967005"
+      },
+      {
+        "file": "src/app/shared/services/comment.service.ts",
+        "hash": "11114456009042425896"
       },
       {
         "file": "src/app/shared/services/notification.service.spec.ts",
@@ -529,7 +573,7 @@
       },
       {
         "file": "src/app/shared/shared.module.ts",
-        "hash": "15833652807900190543"
+        "hash": "6841317106775761347"
       },
       {
         "file": "src/assets/icon/favicon.png",
