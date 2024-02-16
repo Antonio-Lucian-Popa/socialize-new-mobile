@@ -11,9 +11,9 @@ export class CommentComponent {
   @Input()
   comment!: Comment;
 
-  public expandedStates: { [commentId: number]: boolean } = {};
+  public expandedStates: { [commentId: string]: boolean } = {};
 
-  public showSubComments: { [key: number]: boolean } = {}; // Tracks visibility of subcomments for each comment
+  public showSubComments: { [key: string]: boolean } = {}; // Tracks visibility of subcomments for each comment
 
 
   // Flag to toggle text display
@@ -29,7 +29,7 @@ export class CommentComponent {
   //   this.showFullText = !this.showFullText;
   // }
 
-  toggleText(commentId: number): void {
+  toggleText(commentId: string): void {
     // If the comment ID exists in the map, toggle its state. Otherwise, set it to true.
     if (this.expandedStates.hasOwnProperty(commentId)) {
       this.expandedStates[commentId] = !this.expandedStates[commentId];
@@ -38,7 +38,7 @@ export class CommentComponent {
     }
   }
 
-  toggleSubComments(commentId: number): void {
+  toggleSubComments(commentId: string): void {
     this.showSubComments[commentId] = !this.showSubComments[commentId];
   }
 

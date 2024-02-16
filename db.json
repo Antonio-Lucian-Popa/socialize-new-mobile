@@ -1,108 +1,103 @@
 {
   "posts": [
     {
-      "id": 1,
-      "description": "My first image on this platform, i want to show you my new image from my last holliday",
+      "id": "1",
+      "description": "My first image on this platform, i want to show you my new image from my last holiday",
       "createdAt": "2023-01-22",
-      "images": [
-        "https://images.unsplash.com/photo-1682686580186-b55d2a91053c?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "imageFilenames": [
+        "photo-1682686580186-b55d2a91053c.jpg"
       ],
       "user": {
-        "id": 1,
-        "profileImage": "https://randomuser.me/api/portraits/women/57.jpg",
+        "id": "1",
         "firstName": "Lidia",
         "lastName": "Popescu",
-        "email": "john@gmail.com"
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
-      "numberOfUserLikes": 8,
+      "likes": [],
       "numberOfComments": 8
     },
     {
-      "id": 2,
+      "id": "2",
       "description": "My first image on this platform",
       "createdAt": "2023-01-22",
-      "images": [
-        "https://images.unsplash.com/photo-1699553099449-1400e92b8fbb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "imageFilenames": [
+        "photo-1699553099449-1400e92b8fbb.jpg"
       ],
       "user": {
-        "id": 1,
-        "profileImage": "https://randomuser.me/api/portraits/women/57.jpg",
-        "firstName": "Lidia",
-        "lastName": "Popescu",
-        "email": "john@gmail.com"
+        "id": "1",
+        "firstName": "Jake",
+        "lastName": "Anderson",
+        "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
-      "numberOfUserLikes": 8,
+      "likes": [],
       "numberOfComments": 8
     },
     {
-      "id": 3,
+      "id": "3",
       "description": "My first image on this platform",
       "createdAt": "2023-01-22",
-      "images": [
-        "https://images.unsplash.com/photo-1699565979651-7fd87e4d38d7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "imageFilenames": [
+        "photo-1699565979651-7fd87e4d38d7.jpg"
       ],
       "user": {
-        "id": 1,
-        "profileImage": "https://randomuser.me/api/portraits/women/57.jpg",
-        "firstName": "Lidia",
-        "lastName": "Popescu",
-        "email": "john@gmail.com"
+        "id": "1",
+        "firstName": "Giovanni",
+        "lastName": "Rullo",
+        "avatar": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
-      "numberOfUserLikes": 8,
+      "likes": [],
       "numberOfComments": 8
     },
     {
-      "id": 4,
+      "id": "4",
       "description": "My first image on this platform",
       "createdAt": "2023-01-22",
-      "images": [
-        "https://images.unsplash.com/photo-1699565979651-7fd87e4d38d7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "imageFilenames": [
+        "photo-1699565979651-7fd87e4d38d7.jpg"
       ],
       "user": {
-        "id": 1,
-        "profileImage": "https://randomuser.me/api/portraits/women/57.jpg",
+        "id": "1",
         "firstName": "Lidia",
         "lastName": "Popescu",
-        "email": "john@gmail.com"
+        "avatar": "avatar-women-57.jpg"
       },
-      "numberOfUserLikes": 8,
+      "likes": [],
       "numberOfComments": 8
     },
     {
-      "id": 5,
-      "description": "My first image on this platform, i want to show you my new image from my last holliday",
+      "id": "5",
+      "description": "My first image on this platform, i want to show you my new image from my last holiday",
       "createdAt": "2023-01-22",
-      "images": [
-        "https://images.unsplash.com/photo-1682686580186-b55d2a91053c?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "imageFilenames": [
+        "photo-1682686580186-b55d2a91053c.jpg"
       ],
       "user": {
-        "id": 1,
-        "profileImage": "https://randomuser.me/api/portraits/women/57.jpg",
+        "id": "1",
         "firstName": "Lidia",
         "lastName": "Popescu",
-        "email": "john@gmail.com"
+        "avatar": "avatar-women-57.jpg"
       },
-      "numberOfUserLikes": 8,
+      "likes": [],
       "numberOfComments": 8
     },
     {
-      "id": 6,
-      "description": "My first image on this platform, i want to show you my new image from my last holliday",
+      "id": "6",
+      "description": "My first image on this platform, i want to show you my new image from my last holiday",
       "createdAt": "2023-01-22",
-      "images": [
-        "https://images.unsplash.com/photo-1682686580186-b55d2a91053c?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "imageFilenames": [
+        "photo-1682686580186-b55d2a91053c.jpg"
       ],
       "user": {
-        "id": 1,
-        "profileImage": "https://randomuser.me/api/portraits/women/57.jpg",
+        "id": "1",
         "firstName": "Lidia",
         "lastName": "Popescu",
-        "email": "john@gmail.com"
+        "avatar": "avatar-women-57.jpg"
       },
-      "numberOfUserLikes": 8,
+      "likes": [],
       "numberOfComments": 8
     }
-  ],
+  ]
+  ,
   "users": [
     {
       "uuid": 1,

@@ -73,7 +73,7 @@ export class Tab2Page implements OnInit, OnDestroy {
     }, 500);
   }
 
-  openImage(postId: number): void {
+  openImage(postId: string): void {
     this.router.navigateByUrl("/viewPost/" + postId);
   }
 

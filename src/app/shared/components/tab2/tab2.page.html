@@ -18,7 +18,7 @@
   <ion-list class="ion-margin-top" *ngIf="isPopularImages">
     <div class="d-flex flex-wrap">
         <div class="image-container" *ngFor="let popularimage of popularImages; let index"
-             (click)="openImage(popularimage.id)" [style.background-image]="'url(' + popularimage.images[0] + ')'">
+             (click)="openImage(popularimage.id)" [style.background-image]="'url(' + popularimage.imageFilenames[0] + ')'">
         </div>
     </div>
 </ion-list>

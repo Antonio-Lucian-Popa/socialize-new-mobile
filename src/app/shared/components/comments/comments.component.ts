@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Comment } from '../../interface/comment';
 import { CommentService } from '../../services/comment.service';
 
@@ -9,13 +9,20 @@ import { CommentService } from '../../services/comment.service';
 })
 export class CommentsComponent  implements OnInit {
 
+  @Input() postId!: string;
+
   comments: Comment[] = [];
 
   constructor(private commentService: CommentService) { }
 
   ngOnInit() {
-    this.commentService.getComments().subscribe((comments: Comment[]) => {
+    this.commentService.getComments(this.postId).subscribe((comments: Comment[]) => {
       this.comments = comments;
+    });
+
+    // in case of new comment from the user
+    this.commentService.userComment.subscribe((comment: Comment) => {
+      this.comments.push(comment);
     });
 
     document.addEventListener('ionInput', function(e) {

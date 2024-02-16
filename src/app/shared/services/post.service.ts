@@ -40,6 +40,10 @@ export class PostService {
     return this.http.get<Post[]>(this.URL_LINK);
   }
 
+  getPosts():Observable<Post[]> {
+    return this.http.get<Post[]>(this.URL_LINK);
+  }
+
   private dataURLtoBlob(dataurl: string): Blob {
     const arr = dataurl.split(',');
     const mime = arr[0].match(/:(.*?);/)![1];

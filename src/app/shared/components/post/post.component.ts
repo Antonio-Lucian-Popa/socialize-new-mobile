@@ -1,5 +1,8 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { IonModal } from '@ionic/angular';
+import { Post, UserPost } from '../../interface/post';
+import { CommentService } from '../../services/comment.service';
 
 @Component({
   selector: 'app-post',
@@ -8,9 +11,14 @@ import { IonModal } from '@ionic/angular';
 })
 export class PostComponent  implements OnInit {
 
-  @Input() post: any;
+  @Input()
+  post!: Post;
 
-  myUUid = "1234567890";
+  userInputComment = this.fb.group({
+    value: ['']
+  })
+
+  myUUid = "1234567890"; // TODO: Find a way to get the actual user id
 
   dataLoaded = false;
 
@@ -18,7 +26,10 @@ export class PostComponent  implements OnInit {
 
   isModalOpen = false;
 
-  constructor() { }
+  // State to manage whether the full description is shown
+  showFullDescription = false;
+
+  constructor(private fb: FormBuilder, private commentService: CommentService) { }
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -29,31 +40,51 @@ export class PostComponent  implements OnInit {
 
   onLikePost() {
     this.isPostLiked = !this.isPostLiked;
-    if(this.isPostLiked) {
+    if (this.isPostLiked) {
       this.post.likes.push({
-        id: 3,
-        user: {
-          id: this.myUUid,
-          name: 'John Doe',
-          avatar: 'https://picsum.photos/200/300/?random'
-        }
+        id: this.myUUid,
+        firstName: 'John',
+        lastName: 'Doe',
+        avatar: 'https://picsum.photos/200/300/?random'
       });
     } else {
-      this.post.likes = this.post.likes.filter((like: any) => like.user.id !== this.myUUid);
+      const indexOfLikeToRemove = this.post.likes.findIndex((like: UserPost) => like.id === this.myUUid);
+      if (indexOfLikeToRemove !== -1) {
+        // Correctly remove the item without reassigning the result of splice
+        this.post.likes.splice(indexOfLikeToRemove, 1);
+      }
     }
     // Made a request to the server to like the post
   }
+
 
   isPostLikedByUser() {
     return this.post.likes.some((like: any) => like.user.id === this.myUUid);
   }
 
-
-  // comment modal
-  setOpen(isOpen: boolean) {
-    this.isModalOpen = isOpen;
+  createComment(): void {
+    const userInputForm = this.userInputComment.get("value");
+    const comment = (userInputForm && userInputForm.value) ? userInputForm.value : '';
+    this.commentService.userComment.next({
+      id: '3',
+      userDto: {
+        id: this.myUUid,
+        firstName: 'John',
+        lastName: 'Doe',
+        avatar: 'https://picsum.photos/200/300/?random'
+      },
+      value: comment,
+      createdAt: '',
+      postId: '',
+      parentId: '',
+      subComments: []
+    });
+    this.userInputComment.reset();
   }
 
-  // end comment modal
+  // Toggle the state between showing the full description and the truncated version
+  toggleDescription() {
+    this.showFullDescription = !this.showFullDescription;
+  }
 
 }

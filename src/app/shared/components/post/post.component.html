@@ -4,8 +4,8 @@
       <img src="{{ post.user.avatar }}" alt="avatar">
     </div>
     <div class="info">
-      <div class="name">{{ post.user.name }}</div>
-      <div class="date">{{ post.created_at | date: 'dd/MM/yyyy' }}</div>
+      <div class="name">{{ post.user.firstName }} {{ post.user.lastName }}</div>
+      <div class="date">{{ post.createdAt | date: 'dd/MM/yyyy' }}</div>
     </div>
   </div>
 
@@ -42,15 +42,31 @@
     </swiper-slide>
   </swiper-container>
 </div>
-<div class="bottom d-flex align-items-center justify-content-start" *ngIf="dataLoaded; else loadingBottom">
-  <div class="d-flex align-items-center mr-2">
-    <ion-icon name="heart-outline" *ngIf="!isPostLiked" (click)="onLikePost()"></ion-icon>
-    <ion-icon name="heart" *ngIf="isPostLiked" (click)="onLikePost()"></ion-icon>
-    <span class="ml-1">{{post.likes.length}}</span>
+<div class="bottom d-flex flex-column justify-content-start" *ngIf="dataLoaded; else loadingBottom">
+  <div class="post-description mt-3 mb-3">
+    <span class="description">
+      <!-- Display either the full description or a truncated version based on the component's state -->
+      {{ showFullDescription ? post.description : (post.description | slice:0:50) }}
+      <!-- Check if the description length exceeds the threshold -->
+      <ng-container *ngIf="post.description.length > 50">
+        <!-- Toggle link -->
+        <a href="javascript:void(0)" (click)="toggleDescription()">
+          {{ showFullDescription ? 'Show less' : 'Show more' }}
+        </a>
+      </ng-container>
+    </span>
   </div>
-  <div class="d-flex align-items-center">
-    <ion-icon id="open-comment-modal" name="chatbubble-ellipses-outline"></ion-icon>
-    <span class="ml-1">3</span>
+
+  <div class="container-action-post d-flex align-items-center justify-content-start">
+    <div class="d-flex align-items-center mr-2">
+      <ion-icon name="heart-outline" *ngIf="!isPostLiked" (click)="onLikePost()"></ion-icon>
+      <ion-icon name="heart" *ngIf="isPostLiked" (click)="onLikePost()"></ion-icon>
+      <span class="ml-1">{{post.likes.length}}</span>
+    </div>
+    <div class="d-flex align-items-center">
+      <ion-icon id="open-comment-modal" name="chatbubble-ellipses-outline"></ion-icon>
+      <span class="ml-1">3</span>
+    </div>
   </div>
 </div>
 
@@ -87,18 +103,18 @@
 <ion-modal *ngIf="dataLoaded" #modal trigger="open-comment-modal" [initialBreakpoint]="0.75" [breakpoints]="[0, 0.75]">
   <ng-template>
     <ion-content class="ion-padding">
-      <app-comments></app-comments>
+      <app-comments [postId]="post.id"></app-comments>
       <!------------Bottom--------------->
       <div class="bottom-comment d-flex align-items-center w-100">
         <ion-avatar class="d-flex align-items-center justify-content-center" slot="start">
           <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
         </ion-avatar>
-        <div class="container-input d-flex align-items-center w-100 ml-3">
-          <ion-textarea placeholder="Type something here"></ion-textarea>
-          <ion-button fill="clear" slot="end">
+        <form class="container-input d-flex align-items-center w-100 ml-3" [formGroup]="userInputComment">
+          <ion-textarea placeholder="Type something here" formControlName="value"></ion-textarea>
+          <ion-button fill="clear" slot="end" (click)="createComment()">
             <ion-icon name="send" slot="icon-only"></ion-icon>
           </ion-button>
-        </div>
+        </form>
       </div>
     </ion-content>
   </ng-template>

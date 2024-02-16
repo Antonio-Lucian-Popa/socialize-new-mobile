@@ -1,14 +1,14 @@
 <!-- Main Comment -->
 <ion-item class="mt-2">
   <ion-avatar slot="start">
-    <img src="{{ comment.user.avatar }}" />
+    <img src="{{ comment.userDto.avatar }}" />
   </ion-avatar>
   <div class="d-flex flex-column align-items-start">
     <ion-label class="wrap-text">
-      <h2>{{ comment.user.firstName }} {{ comment.user.lastName }}</h2>
+      <h2>{{ comment.userDto.firstName }} {{ comment.userDto.lastName }}</h2>
       <p>
-        {{ expandedStates[comment.id] ? comment.content : (comment.content.length > maxLength ? (comment.content | slice:0:maxLength) + '...' : comment.content) }}
-        <span *ngIf="!expandedStates[comment.id] && comment.content.length > maxLength" (click)="toggleText(comment.id)" style="color: blue; cursor: pointer;">Show more</span>
+        {{ expandedStates[comment.id] ? comment.value : (comment.value.length > maxLength ? (comment.value | slice:0:maxLength) + '...' : comment.value) }}
+        <span *ngIf="!expandedStates[comment.id] && comment.value.length > maxLength" (click)="toggleText(comment.id)" style="color: blue; cursor: pointer;">Show more</span>
       </p>
     </ion-label>
 

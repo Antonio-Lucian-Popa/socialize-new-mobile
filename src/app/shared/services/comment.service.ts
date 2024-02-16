@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Comment } from '../interface/comment';
 
 @Injectable({
@@ -8,11 +8,13 @@ import { Comment } from '../interface/comment';
 })
 export class CommentService {
 
+  userComment = new Subject<Comment>();
+
   private URL_LINK = 'http://localhost:3000/comments';
 
   constructor(private http: HttpClient) { }
 
-  getComments(): Observable<Comment[]> {
-    return this.http.get<Comment[]>(this.URL_LINK);
+  getComments(postId: string): Observable<Comment[]> {
+    return this.http.get<Comment[]>(`${this.URL_LINK}/${postId}`);
   }
 }

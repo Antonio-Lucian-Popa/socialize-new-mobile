@@ -89,7 +89,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "17733682724015725013"
+        "hash": "10285011756538460822"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -121,7 +121,7 @@
       },
       {
         "file": "db.json",
-        "hash": "1960137265994685446"
+        "hash": "6171602574740412626"
       },
       {
         "file": "ionic.config.json",
@@ -265,11 +265,11 @@
       },
       {
         "file": "src/app/shared/components/comments/comments.component.html",
-        "hash": "14347993934677836602"
+        "hash": "16324454568956666052"
       },
       {
         "file": "src/app/shared/components/comments/comments.component.scss",
-        "hash": "3244421341483603138"
+        "hash": "15036214574332298676"
       },
       {
         "file": "src/app/shared/components/comments/comments.component.spec.ts",
@@ -277,7 +277,7 @@
       },
       {
         "file": "src/app/shared/components/comments/comments.component.ts",
-        "hash": "8977588937845921068"
+        "hash": "11886184421051603977"
       },
       {
         "file": "src/app/shared/components/date-picker/date-picker.component.html",
@@ -345,7 +345,7 @@
       },
       {
         "file": "src/app/shared/components/post/post.component.html",
-        "hash": "7116253761068931647"
+        "hash": "8674532826258210493"
       },
       {
         "file": "src/app/shared/components/post/post.component.scss",
@@ -357,7 +357,7 @@
       },
       {
         "file": "src/app/shared/components/post/post.component.ts",
-        "hash": "7092671256353802321"
+        "hash": "12411546040083876805"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.html",
@@ -597,7 +597,7 @@
       },
       {
         "file": "src/global.scss",
-        "hash": "10994412731593434325"
+        "hash": "16168591766312018218"
       },
       {
         "file": "src/index.html",

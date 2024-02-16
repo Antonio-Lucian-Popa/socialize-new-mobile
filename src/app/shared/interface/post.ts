@@ -1,11 +1,17 @@
-import { User } from "./user";
-
 export interface Post {
-  id: number;
+  id: string;
   description: string;
   createdAt: string;
-  images: string[],
-  user: User;
-  numberOfUserLikes: number;
-  numberOfComments: number;
+  imageFilenames: string[],
+  user: UserPost;
+  likes: UserPost[];
+ // comments: Comment[];
+ numberOfComments: number;
+}
+
+export interface UserPost {
+  id: string;
+  firstName: string;
+  lastName: string;
+  avatar: string;
 }
