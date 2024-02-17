@@ -18,6 +18,7 @@
     "@capacitor/keyboard": "5.0.6",
     "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "^7.0.0",
+    "@ionic/storage-angular": "^4.0.0",
     "@ng-bootstrap/ng-bootstrap": "^16.0.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.2",
@@ -89,7 +90,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "10285011756538460822"
+        "hash": "14112373958350011076"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -121,7 +122,7 @@
       },
       {
         "file": "db.json",
-        "hash": "6171602574740412626"
+        "hash": "2791242417056867200"
       },
       {
         "file": "ionic.config.json",
@@ -249,7 +250,7 @@
       },
       {
         "file": "src/app/shared/components/comments/comment/comment.component.html",
-        "hash": "14639772966378602950"
+        "hash": "10132939325819919784"
       },
       {
         "file": "src/app/shared/components/comments/comment/comment.component.scss",
@@ -261,7 +262,7 @@
       },
       {
         "file": "src/app/shared/components/comments/comment/comment.component.ts",
-        "hash": "14642959704193519698"
+        "hash": "1127754194730308934"
       },
       {
         "file": "src/app/shared/components/comments/comments.component.html",
@@ -277,7 +278,7 @@
       },
       {
         "file": "src/app/shared/components/comments/comments.component.ts",
-        "hash": "11886184421051603977"
+        "hash": "17429735930901246559"
       },
       {
         "file": "src/app/shared/components/date-picker/date-picker.component.html",
@@ -305,7 +306,7 @@
       },
       {
         "file": "src/app/shared/components/home/tab1.page.html",
-        "hash": "2145680763591773820"
+        "hash": "4880628651233348222"
       },
       {
         "file": "src/app/shared/components/home/tab1.page.scss",
@@ -345,11 +346,11 @@
       },
       {
         "file": "src/app/shared/components/post/post.component.html",
-        "hash": "8674532826258210493"
+        "hash": "6999019663738831809"
       },
       {
         "file": "src/app/shared/components/post/post.component.scss",
-        "hash": "11290633105407446877"
+        "hash": "8904547180962729983"
       },
       {
         "file": "src/app/shared/components/post/post.component.spec.ts",
@@ -357,11 +358,11 @@
       },
       {
         "file": "src/app/shared/components/post/post.component.ts",
-        "hash": "12411546040083876805"
+        "hash": "1816296995249816998"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.html",
-        "hash": "310994887183950408"
+        "hash": "8067101695522827661"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.scss",
@@ -373,7 +374,7 @@
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.ts",
-        "hash": "3750010764560454371"
+        "hash": "11345080487339933907"
       },
       {
         "file": "src/app/shared/components/story-list/story/story.component.html",
@@ -433,7 +434,7 @@
       },
       {
         "file": "src/app/shared/components/tab2/tab2.page.html",
-        "hash": "2624882947712569731"
+        "hash": "12281847320098351969"
       },
       {
         "file": "src/app/shared/components/tab2/tab2.page.scss",
@@ -445,7 +446,7 @@
       },
       {
         "file": "src/app/shared/components/tab2/tab2.page.ts",
-        "hash": "11350882622102245268"
+        "hash": "5511887490356695420"
       },
       {
         "file": "src/app/shared/components/tab3/tab3-routing.module.ts",
@@ -521,7 +522,7 @@
       },
       {
         "file": "src/app/shared/interface/comment.ts",
-        "hash": "15956257196792970566"
+        "hash": "7279474315682642227"
       },
       {
         "file": "src/app/shared/interface/notification.ts",
@@ -529,11 +530,11 @@
       },
       {
         "file": "src/app/shared/interface/post.ts",
-        "hash": "2751227460064741658"
+        "hash": "3261751103009331203"
       },
       {
         "file": "src/app/shared/interface/user.ts",
-        "hash": "9170332063472264195"
+        "hash": "1408044742523094786"
       },
       {
         "file": "src/app/shared/pipes/time-ago.pipe.spec.ts",
@@ -549,7 +550,7 @@
       },
       {
         "file": "src/app/shared/services/comment.service.ts",
-        "hash": "11114456009042425896"
+        "hash": "1456931779000383025"
       },
       {
         "file": "src/app/shared/services/notification.service.spec.ts",
@@ -565,7 +566,7 @@
       },
       {
         "file": "src/app/shared/services/post.service.ts",
-        "hash": "1733578933591374606"
+        "hash": "1827882937777620604"
       },
       {
         "file": "src/app/shared/services/story.service.ts",

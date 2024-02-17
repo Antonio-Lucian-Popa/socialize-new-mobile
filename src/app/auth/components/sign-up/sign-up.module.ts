@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -8,6 +8,7 @@ import { SignUpPageRoutingModule } from './sign-up-routing.module';
 
 import { SignUpPage } from './sign-up.page';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { WelcomeScreenComponent } from './welcome-screen/welcome-screen.component';
 
 @NgModule({
   imports: [
@@ -15,8 +16,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     FormsModule,
     IonicModule,
     SignUpPageRoutingModule,
-    SharedModule
+    SharedModule,
   ],
-  declarations: [SignUpPage]
+  declarations: [SignUpPage, WelcomeScreenComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class SignUpPageModule {}

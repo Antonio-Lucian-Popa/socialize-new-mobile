@@ -2,6 +2,7 @@ import { HttpClient, HttpEvent, HttpRequest } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Post } from '../interface/post';
+import { Page } from '../interface/page';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,22 @@ export class PostService {
     // Send the request and return the event stream
     return this.http.request(req);
   }
+
+  /**
+   *
+   * @param userId my user id
+   * @param page
+   * @param size
+   * @returns a list of post from the user and the users that the user is following
+   */
+  getFollowingUsersPosts(userId: string, page: number, size: number): Observable<Page<Post>> {
+    const params = {
+      page: page.toString(),
+      size: size.toString()
+    };
+    return this.http.get<Page<Post>>(`${this.URL_LINK}/posts/${userId}`, { params });
+  }
+
   findPopularPosts():Observable<Post[]> {
     return this.http.get<Post[]>(this.URL_LINK);
   }

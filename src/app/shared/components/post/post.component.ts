@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { IonModal } from '@ionic/angular';
 import { Post, UserPost } from '../../interface/post';
 import { CommentService } from '../../services/comment.service';
 

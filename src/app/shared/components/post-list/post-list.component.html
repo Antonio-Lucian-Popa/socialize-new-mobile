@@ -1,3 +1,11 @@
 <div class="container-post mb-5" *ngFor="let post of posts">
 <app-post [post]="post"></app-post>
 </div>
+
+  <!-- Infinite Scroll -->
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more posts...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>

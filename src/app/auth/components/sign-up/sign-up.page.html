@@ -1,4 +1,30 @@
-<ion-header [translucent]="true">
+<ion-content [fullscreen]="true">
+  <swiper-container class="swiper-container" pagination centeredSlides="true">
+    <!-- Welcome Slide -->
+    <swiper-slide>
+      <div class="slide slide-welcome">
+        <app-welcome-screen></app-welcome-screen>
+        <div class="d-flex justify-content-end mr-4 mb-4">
+          <ion-button id="nextSlide">Get Started</ion-button>
+        </div>
+      </div>
+    </swiper-slide>
+
+    <!-- Registration Slide -->
+    <swiper-slide>
+      <div class="slide slide-registration">
+        <ion-header [translucent]="true"></ion-header>
+        <!-- Registration form and content here -->
+        <div class="d-flex justify-content-end mr-4 mb-4">
+          <ion-button expand="block">Register</ion-button>
+        </div>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>
+
+
+<!-- <ion-header [translucent]="true">
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -33,4 +59,4 @@
   <div class="d-flex justify-content-center w-100 mt-4">
     <span class="term-message">By creating an account you are agree to our <br/><a>Term and conditions</a></span>
   </div>
-</ion-content>
+</ion-content> -->
