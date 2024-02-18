@@ -90,19 +90,19 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "14112373958350011076"
+        "hash": "13061800457442562712"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "10275764347699025716"
+        "hash": "18149771993326981026"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "7300106633145786765"
+        "hash": "3801491891333695426"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "14158129976944616482"
+        "hash": "13666950751363439150"
       },
       {
         "file": ".vscode/extensions.json",
@@ -134,11 +134,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "6685870873399746828"
+        "hash": "3257003794838074378"
       },
       {
         "file": "package.json",
-        "hash": "13740320503152625108"
+        "hash": "8458565434156300630"
       },
       {
         "file": "src/app/app-routing.module.ts",
@@ -162,7 +162,7 @@
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "13157808411087311238"
+        "hash": "18320341896306091928"
       },
       {
         "file": "src/app/auth/components/sign-in/sign-in-routing.module.ts",
@@ -194,15 +194,15 @@
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.module.ts",
-        "hash": "962019834968847449"
+        "hash": "7772057344764682930"
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.html",
-        "hash": "6605725887295092270"
+        "hash": "3433742472379777016"
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.scss",
-        "hash": "16901780510571171691"
+        "hash": "12324246579901993590"
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.spec.ts",
@@ -210,7 +210,23 @@
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.ts",
-        "hash": "7625109843303321289"
+        "hash": "13667126242895179911"
+      },
+      {
+        "file": "src/app/auth/components/sign-up/welcome-screen/welcome-screen.component.html",
+        "hash": "14608673107075627136"
+      },
+      {
+        "file": "src/app/auth/components/sign-up/welcome-screen/welcome-screen.component.scss",
+        "hash": "16515665205425635025"
+      },
+      {
+        "file": "src/app/auth/components/sign-up/welcome-screen/welcome-screen.component.spec.ts",
+        "hash": "3887415363358211008"
+      },
+      {
+        "file": "src/app/auth/components/sign-up/welcome-screen/welcome-screen.component.ts",
+        "hash": "4611736178735428498"
       },
       {
         "file": "src/app/auth/interfaces/user-login-form.ts",
@@ -226,7 +242,15 @@
       },
       {
         "file": "src/app/auth/services/auth.service.ts",
-        "hash": "13363468835472643001"
+        "hash": "13990574772257644696"
+      },
+      {
+        "file": "src/app/auth/token.interceptor.spec.ts",
+        "hash": "16003482121958608185"
+      },
+      {
+        "file": "src/app/auth/token.interceptor.ts",
+        "hash": "2726264103691001709"
       },
       {
         "file": "src/app/explore-container/explore-container.component.html",
@@ -358,11 +382,11 @@
       },
       {
         "file": "src/app/shared/components/post/post.component.ts",
-        "hash": "1816296995249816998"
+        "hash": "1279770815872064754"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.html",
-        "hash": "8067101695522827661"
+        "hash": "17594298036106759227"
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.scss",
@@ -374,7 +398,7 @@
       },
       {
         "file": "src/app/shared/components/post-list/post-list.component.ts",
-        "hash": "11345080487339933907"
+        "hash": "3895758622931415780"
       },
       {
         "file": "src/app/shared/components/story-list/story/story.component.html",
@@ -446,7 +470,7 @@
       },
       {
         "file": "src/app/shared/components/tab2/tab2.page.ts",
-        "hash": "5511887490356695420"
+        "hash": "10684474582411722407"
       },
       {
         "file": "src/app/shared/components/tab3/tab3-routing.module.ts",
@@ -529,6 +553,10 @@
         "hash": "18156300866061493535"
       },
       {
+        "file": "src/app/shared/interface/page.ts",
+        "hash": "7511329291873939005"
+      },
+      {
         "file": "src/app/shared/interface/post.ts",
         "hash": "3261751103009331203"
       },
@@ -566,7 +594,7 @@
       },
       {
         "file": "src/app/shared/services/post.service.ts",
-        "hash": "1827882937777620604"
+        "hash": "12434279250965643203"
       },
       {
         "file": "src/app/shared/services/story.service.ts",
@@ -574,7 +602,7 @@
       },
       {
         "file": "src/app/shared/shared.module.ts",
-        "hash": "6841317106775761347"
+        "hash": "12097503120360222866"
       },
       {
         "file": "src/assets/icon/favicon.png",
@@ -606,7 +634,7 @@
       },
       {
         "file": "src/main.ts",
-        "hash": "11803948974086278668"
+        "hash": "11146210856248876816"
       },
       {
         "file": "src/polyfills.ts",

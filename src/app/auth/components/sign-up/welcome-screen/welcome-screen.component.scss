@@ -1,10 +1,38 @@
+// .logo-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100%;
+//   img {
+//     max-width: 80%;
+//     max-height: 80%;
+//   }
+// }
+
 .logo-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   height: 100%;
-  img {
-    max-width: 80%;
-    max-height: 80%;
-  }
 }
+
+.logo-container img {
+  max-width: 80%; /* Adjust based on your preference */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.welcome-description {
+  margin-top: 20px; /* Space between logo and text */
+  color: #666; /* Subtle text color, adjust as needed */
+  font-size: 14px; /* Adjust based on your design */
+ // padding: 0 20px; /* Add some padding on the sides */
+
+  font-size: 16px; /* Facebook-like font size for readability */
+  font-family: Arial, sans-serif; /* A clean, web-safe font family */
+  color: #606770; /* A dark gray color similar to Facebook's text */
+  margin-top: 20px; /* Space between the logo and the text */
+  max-width: 80%; /* Limit width to improve readability */
+}
+

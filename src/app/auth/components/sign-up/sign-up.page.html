@@ -1,25 +1,93 @@
 <ion-content [fullscreen]="true">
-  <swiper-container class="swiper-container" pagination centeredSlides="true">
+  <swiper-container #gallery class="swiper-container" centeredSlides="true" [allowTouchMove]="false">
     <!-- Welcome Slide -->
-    <swiper-slide>
+    <swiper-slide class="welcome-slide">
       <div class="slide slide-welcome">
-        <app-welcome-screen></app-welcome-screen>
-        <div class="d-flex justify-content-end mr-4 mb-4">
-          <ion-button id="nextSlide">Get Started</ion-button>
+        <div class="app-welcome-screen-container">
+          <app-welcome-screen></app-welcome-screen>
+        </div>
+        <div class="d-flex justify-content-end mr-4 mb-4 welcome-btn">
+          <ion-button id="nextSlide" (click)="gallery?.swiper!.slideNext();">Get Started</ion-button>
         </div>
       </div>
     </swiper-slide>
 
+    <!-- o sa avem o pagina cu registration si una cu sa adaugi o poza, eventul inca una cu followeri sa adaugi -->
     <!-- Registration Slide -->
     <swiper-slide>
       <div class="slide slide-registration">
-        <ion-header [translucent]="true"></ion-header>
         <!-- Registration form and content here -->
-        <div class="d-flex justify-content-end mr-4 mb-4">
-          <ion-button expand="block">Register</ion-button>
+        <ion-content class="ion-padding">
+          <div class="d-flex flex-column justify-content-between h-100">
+            <h3>Create a New Account</h3>
+            <form [formGroup]="userInfo" (ngSubmit)="register()">
+              <div class="container-input d-flex align-items-center justify-content-between mb-3">
+                <ion-input class="mr-3" formControlName="firstName" type="text" placeholder="First Name"></ion-input>
+                <ion-input formControlName="lastName" type="text" placeholder="Last Name"></ion-input>
+              </div>
+
+              <div class="container-input mb-3">
+                <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
+              </div>
+
+              <div class="container-input mb-3">
+                <ion-input formControlName="password" type="password" placeholder="password"></ion-input>
+              </div>
+
+              <div class="container-input d-flex align-items-center justify-content-between mb-3">
+                <label>Birthday</label>
+                <ion-datetime-button datetime="datetime" presentation="date"></ion-datetime-button>
+
+                <ion-modal [keepContentsMounted]="true">
+                  <ng-template>
+                    <ion-datetime id="datetime" presentation="date"></ion-datetime>
+                  </ng-template>
+                </ion-modal>
+              </div>
+
+              <div class="container-input mb-3">
+                <ion-select label="Gender" placeholder="Gender" formControlName="gender">
+                  <ion-select-option value="male">Male</ion-select-option>
+                  <ion-select-option value="female">Female</ion-select-option>
+                </ion-select>
+              </div>
+
+              <div class="agree-message">
+                <p>By clicking "Next," you agree to our Terms of Service and acknowledge that you have read our Privacy Policy, including our Cookie Use. </p>
+              </div>
+            </form>
+
+            <div class="d-flex justify-content-end mr-4">
+              <ion-button class="next-btn" expand="block" (click)="this.userInfo.valid ? gallery?.swiper!.slideNext() : null ">Next</ion-button>
+            </div>
+          </div>
+        </ion-content>
+
+      </div>
+    </swiper-slide>
+
+    <swiper-slide class="add-image-profile-slide">
+      <div class="slide">
+        <div class="image-upload-container">
+          <div *ngIf="imagePreview; else uploadTemplate">
+            <img [src]="imagePreview" class="profile-image-preview"/>
+            <ion-button color="primary" (click)="fileInput.click()">Change Image</ion-button>
+          </div>
+          <ng-template #uploadTemplate>
+            <div class="upload-placeholder">
+              <ion-icon name="cloud-upload-outline" class="upload-icon"></ion-icon>
+              <p>Tap to upload your profile image</p>
+              <ion-button color="primary" (click)="fileInput.click()">Upload Image</ion-button>
+            </div>
+          </ng-template>
+          <input type="file" #fileInput (change)="onFileChange($event)" hidden accept="image/*">
+        </div>
+        <div class="d-flex justify-content-end mr-4 mb-4 w-100 register-btn">
+          <ion-button id="nextSlide" (click)="onSubmit()">Register</ion-button>
         </div>
       </div>
     </swiper-slide>
+
   </swiper-container>
 </ion-content>
 

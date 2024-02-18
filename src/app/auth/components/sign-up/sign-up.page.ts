@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ModalController, NavController } from '@ionic/angular';
@@ -12,14 +12,20 @@ import { AuthService } from '../../services/auth.service';
 })
 export class SignUpPage {
 
-  selectedFile?: File;
+  @ViewChild('gallery', { static: false }) gallery: any;
+
+  // selectedFile?: File;
+
+  selectedFile: File | undefined = undefined;
+  imagePreview: string | ArrayBuffer | null = null;
 
   userInfo = this.fb.group({
     firstName: ["", Validators.required],
     lastName: ["", Validators.required],
     birthday: [""],
     email: ["", [Validators.required, Validators.email]],
-    password: ["", Validators.required]
+    password: ["", Validators.required],
+    gender: ["", Validators.required],
   });
 
   isModalOpen = false;
@@ -31,6 +37,7 @@ export class SignUpPage {
     private authService: AuthService,
     private navCtrl: NavController
     ) { }
+
 
   // In your main component
   async openDatePicker() {
@@ -45,17 +52,34 @@ export class SignUpPage {
   }
 
 
-  register(): void {
-    if(this.userInfo.valid) {
-      console.log("form valid");
-      this.router.navigateByUrl("/sign-in");
+  register() {
+    if (this.userInfo.valid) {
+      console.log('Registration Data:', this.userInfo.value);
+      // Here you would usually send the data to your backend or perform some other registration logic
+
+      // After handling registration, move to the next slide
+      // Assuming 'gallery' is your Swiper instance, you might need to adjust this based on how you've set up Swiper
+      this.gallery?.swiper?.slideNext();
     } else {
-      console.log(this.userInfo.value)
+      console.log("Data is invalid");
     }
+
+    this.gallery?.swiper?.slideNext(); // TODO: Remove this line
   }
 
-  onFileSelected(event: any) {
-    this.selectedFile = event.target.files[0];
+  // onFileSelected(event: any) {
+  //   this.selectedFile = event.target.files[0];
+  // }
+
+  onFileChange(event: any): void {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        this.imagePreview = e.target!.result; // Set the preview image URL
+      };
+      reader.readAsDataURL(file); // Read the file as a Data URL
+    }
   }
 
   onSubmit() {

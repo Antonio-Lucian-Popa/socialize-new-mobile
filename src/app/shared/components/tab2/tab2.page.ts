@@ -46,14 +46,14 @@ export class Tab2Page implements OnInit, OnDestroy {
         this.isUsersSearched = true;
         this.isPopularImages = false;
         // TODO: Make a loader when we search for a user
-        this.userService.findUserByUsername(userSearched).subscribe(res => {
-          this.usersSearched = res;
+        // this.userService.findUserByUsername(userSearched).subscribe(res => {
+        //   this.usersSearched = res;
 
-          setTimeout(() => {
-            this.isLoaded = true;
-          }, 3000);
+        //   setTimeout(() => {
+        //     this.isLoaded = true;
+        //   }, 3000);
 
-        });
+        // });
         // TODO: find the user searched
       } else {
         this.isUsersSearched = false;

@@ -16,3 +16,93 @@
     color: #3880ff!important;
   }
 }
+
+.slide {
+  height: 100vh;
+}
+
+.slide-welcome {
+  overflow: hidden;
+}
+
+.welcome-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes space between items */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-welcome-screen-container {
+  height: calc(100vh - 60px); /* Assuming the button and margin take up to 60px */
+  overflow: hidden; /* Adds scroll to the content if it overflows */
+}
+
+.welcome-btn {
+  padding-bottom: 16px;
+}
+
+.container-input {
+  ion-label {
+    padding-left: 10px;
+  }
+  ion-input {
+    border-radius: 5px;
+    padding: 0 10px!important;
+    outline: none!important;
+  }
+}
+
+.next-btn {
+  width: 6rem;
+}
+
+
+.add-image-profile-slide {
+  height: 100vh;
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+
+    .image-upload-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      height: calc(100vh - 60px);
+
+      .profile-image-preview {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+
+      .upload-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px dashed #ccc;
+        padding: 20px;
+        border-radius: 10px;
+
+        .upload-icon {
+          font-size: 48px;
+          color: #ccc;
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    .register-btn {
+      margin-right: 32px;
+    }
+  }
+}
