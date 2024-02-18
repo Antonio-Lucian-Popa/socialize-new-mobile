@@ -1,21 +1,20 @@
-<ion-header [translucent]="true">
-</ion-header>
-
-<ion-content [fullscreen]="true">
+<ion-content class="d-flex">
   <div class="d-flex align-items-center justify-content-center mt-5 mb-5">
     <img src="./assets/logo.png" alt="logo">
   </div>
 
+ <div class="container-bottom">
   <form [formGroup]="userInfo" class="container-inputs mt-5 pb-4">
 
-   <ion-input class="mb-3" formControlName="email" placeholder="Email" type="email"></ion-input>
-   <ion-input class="mb-3" formControlName="password" placeholder="Password" type="password"></ion-input>
+    <ion-input class="mb-3" formControlName="email" placeholder="Email" type="email"></ion-input>
+    <ion-input class="mb-3" formControlName="password" placeholder="Password" type="password"></ion-input>
 
-   <ion-button expand="block" (click)="login()">Login</ion-button>
+    <ion-button expand="block" (click)="login()">Login</ion-button>
 
-  </form>
+   </form>
 
-  <div class="d-flex justify-content-center w-100 mt-4">
-    <span class="term-message">By login you are agree to our <br/><a>Term and conditions</a></span>
-  </div>
+   <div class="d-flex justify-content-center w-100 mt-4">
+     <span class="term-message">By login you are agree to our <br/><a>Term and conditions</a></span>
+   </div>
+ </div>
 </ion-content>
