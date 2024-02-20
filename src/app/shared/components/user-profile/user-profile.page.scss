@@ -115,6 +115,7 @@
   background-color: #FFFFFF;
   min-height: calc(100vh - 50px);
   padding: 0 10px;
+
   .card-header {
     display: flex;
     justify-content: space-between;
@@ -150,8 +151,9 @@
     ion-avatar {
       height: 80px;
       width: 80px;
+
       img {
-        height: 100%!important;
+        height: 100% !important;
       }
     }
 
@@ -204,4 +206,9 @@
   color: #454545;
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+
+.tab-icon {
+  font-size: 1.5rem !important;
 }

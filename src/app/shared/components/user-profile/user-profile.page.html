@@ -46,16 +46,35 @@
       <!-- <ion-button fill="solid" color="primary">Details</ion-button> -->
 
       <mat-tab-group class="mt-3" mat-stretch-tabs="false" mat-align-tabs="center">
-        <mat-tab label="Posts">
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <ion-icon class="tab-icon" name="create-outline"></ion-icon>
+          </ng-template>
           <app-post-list class="d-flex flex-column justify-content-center mt-4"></app-post-list>
         </mat-tab>
-        <mat-tab label="Images">
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <ion-icon class="tab-icon" name="image-outline"></ion-icon>
+          </ng-template>
           <div class="images mt-4">
             <div class="image" *ngFor="let image of userImages">
               <img [src]="image.image" />
             </div>
           </div>
         </mat-tab>
+
+        <!-- <mat-tab label="Posts">
+          <app-post-list class="d-flex flex-column justify-content-center mt-4"></app-post-list>
+        </mat-tab> -->
+        <!-- <mat-tab label="Images">
+          <div class="images mt-4">
+            <div class="image" *ngFor="let image of userImages">
+              <img [src]="image.image" />
+            </div>
+          </div>
+        </mat-tab> -->
       </mat-tab-group>
 
     </div>
