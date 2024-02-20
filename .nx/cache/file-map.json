@@ -90,7 +90,7 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "13061800457442562712"
+        "hash": "9679519400268009541"
       },
       {
         "file": ".nx/cache/lockfile.hash",
@@ -174,11 +174,11 @@
       },
       {
         "file": "src/app/auth/components/sign-in/sign-in.page.html",
-        "hash": "11029722528615672440"
+        "hash": "9848121227355215923"
       },
       {
         "file": "src/app/auth/components/sign-in/sign-in.page.scss",
-        "hash": "16901780510571171691"
+        "hash": "9804734856693902303"
       },
       {
         "file": "src/app/auth/components/sign-in/sign-in.page.spec.ts",
@@ -186,7 +186,7 @@
       },
       {
         "file": "src/app/auth/components/sign-in/sign-in.page.ts",
-        "hash": "2455461296137671443"
+        "hash": "13846333607428427630"
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up-routing.module.ts",
@@ -198,11 +198,11 @@
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.html",
-        "hash": "3433742472379777016"
+        "hash": "5500610453766442293"
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.scss",
-        "hash": "12324246579901993590"
+        "hash": "2538059739585650377"
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.spec.ts",
@@ -210,15 +210,15 @@
       },
       {
         "file": "src/app/auth/components/sign-up/sign-up.page.ts",
-        "hash": "13667126242895179911"
+        "hash": "5578389557977697896"
       },
       {
         "file": "src/app/auth/components/sign-up/welcome-screen/welcome-screen.component.html",
-        "hash": "14608673107075627136"
+        "hash": "12224416518595513017"
       },
       {
         "file": "src/app/auth/components/sign-up/welcome-screen/welcome-screen.component.scss",
-        "hash": "16515665205425635025"
+        "hash": "11867497139089843630"
       },
       {
         "file": "src/app/auth/components/sign-up/welcome-screen/welcome-screen.component.spec.ts",
@@ -242,7 +242,7 @@
       },
       {
         "file": "src/app/auth/services/auth.service.ts",
-        "hash": "13990574772257644696"
+        "hash": "696130238558622151"
       },
       {
         "file": "src/app/auth/token.interceptor.spec.ts",
@@ -530,7 +530,7 @@
       },
       {
         "file": "src/app/shared/components/user-profile/user-profile.page.html",
-        "hash": "8246697647537401275"
+        "hash": "4971563121103014877"
       },
       {
         "file": "src/app/shared/components/user-profile/user-profile.page.scss",

@@ -38,17 +38,17 @@
                 <label>Birthday</label>
                 <ion-datetime-button datetime="datetime" presentation="date"></ion-datetime-button>
 
-                <ion-modal [keepContentsMounted]="true">
+                <ion-modal #dateModal [keepContentsMounted]="true">
                   <ng-template>
-                    <ion-datetime id="datetime" presentation="date"></ion-datetime>
+                    <ion-datetime id="datetime" presentation="date" (ionChange)="onDateChange($event)"></ion-datetime>
                   </ng-template>
                 </ion-modal>
               </div>
 
               <div class="container-input mb-3">
                 <ion-select label="Gender" placeholder="Gender" formControlName="gender">
-                  <ion-select-option value="male">Male</ion-select-option>
-                  <ion-select-option value="female">Female</ion-select-option>
+                  <ion-select-option value="MALE">Male</ion-select-option>
+                  <ion-select-option value="FEMALE">Female</ion-select-option>
                 </ion-select>
               </div>
 

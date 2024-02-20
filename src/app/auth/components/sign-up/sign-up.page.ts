@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ModalController, NavController } from '@ionic/angular';
+import { IonModal, ModalController, NavController } from '@ionic/angular';
 import { DatePickerComponent } from 'src/app/shared/components/date-picker/date-picker.component';
 import { AuthService } from '../../services/auth.service';
 
@@ -13,6 +13,8 @@ import { AuthService } from '../../services/auth.service';
 export class SignUpPage {
 
   @ViewChild('gallery', { static: false }) gallery: any;
+  @ViewChild(IonModal)
+  dateModal!: IonModal;
 
   // selectedFile?: File;
 
@@ -47,10 +49,6 @@ export class SignUpPage {
     return await modal.present();
   }
 
-  onDateChange(event: any) {
-    this.userInfo.get('birthday')!.setValue(event.detail.value);
-  }
-
 
   register() {
     if (this.userInfo.valid) {
@@ -77,6 +75,7 @@ export class SignUpPage {
       const reader = new FileReader();
       reader.onload = (e) => {
         this.imagePreview = e.target!.result; // Set the preview image URL
+        this.selectedFile = event.target.files[0] || null;
       };
       reader.readAsDataURL(file); // Read the file as a Data URL
     }
@@ -84,6 +83,7 @@ export class SignUpPage {
 
   onSubmit() {
    if(this.userInfo.valid) {
+    console.log('Form is valid', this.userInfo.value);
     this.authService.register(this.userInfo.value, this.selectedFile).subscribe({
       next: (response) => {
         console.log('User registered successfully', response);
@@ -99,6 +99,16 @@ export class SignUpPage {
 
   goToSlides() {
     this.navCtrl.navigateForward('/slides');
+  }
+
+  onDateChange(event: CustomEvent) {
+    const selectedDate = event.detail.value;
+    this.userInfo.get('birthday')!.setValue(selectedDate, { onlySelf: true });
+    this.closeModal(); // Call this function to close the modal
+  }
+
+  closeModal() {
+    this.dateModal.dismiss();
   }
 
 }

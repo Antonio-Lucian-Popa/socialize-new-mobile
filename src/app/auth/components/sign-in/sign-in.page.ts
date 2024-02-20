@@ -26,7 +26,7 @@ export class SignInPage {
       if(email && password) {
         this.authService.login(email, password).subscribe((response: any) => {
           console.log(response);
-          this.router.navigate(['home']);
+          this.router.navigate(['/']);
         });
       }
     } else {

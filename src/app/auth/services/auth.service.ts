@@ -15,7 +15,7 @@ export interface Token {
 })
 export class AuthService {
 
-  private URL_LINK = 'http://localhost:3000/api/v1/auth';
+  private URL_LINK = 'http://localhost:8081/api/v1/auth';
  // private accessToken = '';
 
   private readonly storageKey = 'authToken';
@@ -35,8 +35,10 @@ export class AuthService {
   register(userData: any, file?: File): Observable<any> {
     const formData = new FormData();
 
-    // Append user data
-    formData.append('request', new Blob([JSON.stringify(userData)], { type: 'application/json' }));
+    // Append user data with explicit Content-Type for the JSON part
+    // Note: Adding a filename for the JSON blob part ("request.json") might help.
+    const userBlob = new Blob([JSON.stringify(userData)], { type: 'application/json' });
+    formData.append('request', userBlob); // Notice the 'request.json' filename
 
     // Append file if present
     if (file) {
@@ -49,8 +51,9 @@ export class AuthService {
   }
 
 
+
   login(email: string, password: string): Observable<any> {
-    return this.http.post(`${this.URL_LINK}/login`, { email, password }).pipe(
+    return this.http.post(`${this.URL_LINK}/authenticate`, { email, password }).pipe(
       tap((response: any) => {
         this.saveToken(response.token);
       })
