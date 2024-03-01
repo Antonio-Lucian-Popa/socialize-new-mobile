@@ -23,10 +23,10 @@ const routes: Routes = [
         path: 'tab4',
         loadChildren: () => import('../notification/notification.module').then(m => m.NotificationPageModule)
       },
-      {
-        path: 'tab5',
-        loadChildren: () => import('../user-profile/user-profile.module').then(m => m.UserProfilePageModule)
-      },
+      // {
+      //   path: 'tab5',
+      //   loadChildren: () => import('../user-profile/user-profile.module').then(m => m.UserProfilePageModule)
+      // },
       {
         path: 'userProfile/:id',
         loadChildren: () => import('../user-profile/user-profile.module').then(m => m.UserProfilePageModule)

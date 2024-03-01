@@ -113,7 +113,8 @@
 /////////////////////////////////
 .profile-card {
   background-color: #FFFFFF;
-  min-height: calc(100vh - 50px);
+  //min-height: 100vh;
+  min-height: 100%;
   padding: 0 10px;
 
   .card-header {
@@ -190,6 +191,15 @@
 
       ion-button {
         margin-top: 10px;
+      }
+
+      .profile-info {
+        ion-icon {
+          font-size: 1.9rem;
+        }
+        p {
+          margin-left: 0.5rem;
+        }
       }
     }
   }

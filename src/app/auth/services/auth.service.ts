@@ -55,7 +55,8 @@ export class AuthService {
   login(email: string, password: string): Observable<any> {
     return this.http.post(`${this.URL_LINK}/authenticate`, { email, password }).pipe(
       tap((response: any) => {
-        this.saveToken(response.token);
+        console.log(response.access_token)
+        this.saveToken(response.access_token);
       })
     );
   }
@@ -65,11 +66,21 @@ export class AuthService {
   }
 
   async getToken(): Promise<string | null> {
-    return await this._storage?.get(this.storageKey);
+    return await this._storage?.get(this.storageKey) ?? null; // Ensures that `undefined` is converted to `null`
+  }
+
+  isJwtExpired(token: string): boolean {
+    if (!token) {
+      return true;
+    }
+    const decoded: any = jwtDecode(token); // Use `any` or define a more specific type for your decoded token
+    const expirationDate = decoded.exp * 1000; // JS deals with dates in milliseconds since epoch
+    return Date.now() >= expirationDate;
   }
 
   async getUserId(): Promise<string | null> {
     const token = await this.getToken();
+    console.log(token)
     if (token) {
       const decoded: any = jwtDecode(token); // Use `any` or define a more specific type for your decoded token
       return decoded.userId;

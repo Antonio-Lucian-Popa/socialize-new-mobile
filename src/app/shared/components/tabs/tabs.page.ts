@@ -4,6 +4,7 @@ import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
 import { PostService } from '../../services/post.service';
 import { AuthService } from 'src/app/auth/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabs',
@@ -15,18 +16,26 @@ export class TabsPage implements OnInit {
   @ViewChild(IonModal)
   modal!: IonModal;
 
-  images: string[] = []; // This will store the image data
+  userId: string | null = null;
 
-  userId: string = 'userId';
+  images: string[] = []; // This will store the image data
 
   post = this.fb.group({
     description: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder, private postService: PostService, private authService: AuthService) {}
+  constructor(
+    private fb: FormBuilder,
+    private postService: PostService,
+    private authService: AuthService,
+    private router: Router
+    ) {}
 
   ngOnInit(): void {
-      this.authService
+    this.authService.getUserId().then((userId) => {
+      console.log(userId)
+      this.userId = userId;
+    });
   }
 
   cancel() {
@@ -72,6 +81,15 @@ export class TabsPage implements OnInit {
       this.postService.postCreateEmmitter.emit({userId: this.userId, post: this.post.value, images: this.images});
      // this.postService.createPost('userId', this.post.value, this.images).subscribe(res => console.log(res));
     }
+  }
+
+  openUserProfile() {
+    // Open the user profile page
+    this.authService.getUserId().then((userId) => {
+      console.log(userId)
+      this.userId = userId;
+      this.router.navigate(['/tabs/userProfile', this.userId]);
+    });
   }
 
 }

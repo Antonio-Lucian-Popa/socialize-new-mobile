@@ -4,25 +4,25 @@
       <ion-icon name="chevron-back-outline"></ion-icon>
     </div>
 
-   <div class="d-flex flex-column align-items-center justify-content-center w-100 pt-5">
+   <div class="d-flex flex-column align-items-center justify-content-center w-100 pt-5" *ngIf="userProfile">
     <ion-avatar class="mb-3">
       <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
     </ion-avatar>
-    <ion-card-subtitle>Darlene Robertson</ion-card-subtitle>
+    <ion-card-subtitle>{{userProfile.firstName}} {{userProfile.lastName}}</ion-card-subtitle>
    </div>
 
    <div class="container-settings-icon">
     <ion-icon name="settings-outline"></ion-icon>
   </div>
   </div>
-  <ion-card-content>
+  <ion-card-content *ngIf="userProfile">
     <div class="profile-overview">
       <div class="profile-stat">
-        <p class="stat-value">18</p>
+        <p class="stat-value">{{userProfile.following.length}}</p>
         <p class="stat-label">Following</p>
       </div>
       <div class="profile-stat">
-        <p class="stat-value">43k</p>
+        <p class="stat-value">{{userProfile.followers.length}}</p>
         <p class="stat-label">Followers</p>
       </div>
       <div class="profile-stat">
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <div class="ion-no-border d-flex align-items-center w-100 mt-3">
+    <div class="ion-no-border d-flex align-items-center w-100 mt-3" *ngIf="!isLoggedUserProfile">
       <ion-button class="w-100" expand="block">Follow</ion-button>
       <ion-button fill="outline">Message</ion-button>
     </div>
@@ -39,6 +39,16 @@
     <div class="profile-description mt-4">
       <p class="subtitle-profile">About Me</p>
       <p>I have 18 years of investment experience behind me - I know the industry from the inside...</p>
+
+      <div class="profile-info d-flex align-items-center">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <p>{{userProfile.gender}}</p>
+      </div>
+
+      <div class="profile-info d-flex align-items-center">
+        <ion-icon name="balloon-outline"></ion-icon>
+        <p>{{userProfile.birthday | date: 'dd/MM/yyyy'}}</p>
+      </div>
     </div>
 
     <div class="profile-posts mt-4">
@@ -51,7 +61,7 @@
           <ng-template mat-tab-label>
             <ion-icon class="tab-icon" name="create-outline"></ion-icon>
           </ng-template>
-          <app-post-list class="d-flex flex-column justify-content-center mt-4"></app-post-list>
+          <app-post-list [isMyPosts]="true" [userId]="userId" class="user-profile-posts d-flex flex-column justify-content-center mt-4"></app-post-list>
         </mat-tab>
 
         <mat-tab>

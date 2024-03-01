@@ -9,7 +9,7 @@ import { Page } from '../interface/page';
 })
 export class PostService {
 
-  private URL_LINK = 'http://localhost:3000/posts';
+  private URL_LINK = 'http://localhost:8081/api/v1/posts';
 
   postCreateEmmitter = new EventEmitter<any>();
 
@@ -36,6 +36,14 @@ export class PostService {
 
     // Send the request and return the event stream
     return this.http.request(req);
+  }
+
+  getUserPosts(userId: string, page: number, size: number): Observable<Page<Post>> {
+    const params = {
+      page: page.toString(),
+      size: size.toString()
+    };
+    return this.http.get<Page<Post>>(`${this.URL_LINK}/${userId}`, { params });
   }
 
   /**

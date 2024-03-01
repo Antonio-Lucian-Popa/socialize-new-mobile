@@ -75,3 +75,14 @@ ion-tab-bar, ion-tab-button {
     }
   }
 }
+
+app-user-profile {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.user-profile-posts {
+  .container-post {
+    width: 100%!important;
+  }
+}
