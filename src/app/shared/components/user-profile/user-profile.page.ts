@@ -5,6 +5,7 @@ import { PostService } from '../../services/post.service';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { UserService } from '../../services/user.service';
 import { forkJoin } from 'rxjs';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-user-profile',
@@ -63,11 +64,14 @@ export class UserProfilePage implements OnInit, OnDestroy {
 
   userAuthSubscribed: any;
 
+  imageUrl?: SafeUrl;
+
   constructor(
     private route: ActivatedRoute,
     private authService: AuthService,
-    private userService: UserService
-    ) { }
+    private userService: UserService,
+    private sanitizer: DomSanitizer
+  ) { }
 
   ngOnInit(): void {
     this.userId = this.route.snapshot.paramMap.get('id');
@@ -79,14 +83,17 @@ export class UserProfilePage implements OnInit, OnDestroy {
       }
     });
     // made be req to get user profile
-    if(this.userId) {
+    if (this.userId) {
       forkJoin([
         this.userService.findUserById(this.userId),
-       // this.userService.getProfileImage(this.userId)
+        this.userService.getProfileImage(this.userId)
       ]).subscribe((res: any) => {
         console.log(res);
         this.userProfile = res[0];
-      //  console.log(res[1]);
+
+        const objectURL = URL.createObjectURL(res[1]);
+        this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(objectURL);
+        console.log(res[1]);
       });
 
       // this.userService.findUserById(this.userId).subscribe((user: any) => {
@@ -112,7 +119,7 @@ export class UserProfilePage implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-      this.userAuthSubscribed.unsubscribe();
+    this.userAuthSubscribed.unsubscribe();
   }
 
 }
